@@ -11,7 +11,10 @@
     --font-color01: #090320;
     --font-color02: #F8F8F8;
     --title-font:'Lateef', serif;
+    --text-size-h1:55px;
+    --text-size-h2:27px;
     --text-font: 'KoHo', sans-serif;
+    --text-size-p:15px;
     --title-padding:15%;
 }
 
