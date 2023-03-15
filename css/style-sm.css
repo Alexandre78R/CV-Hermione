@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    line-height: 0.5rem;
+}
+
+:root{
+    --primary-color: #F8F8F8;
+    --font-color01: #090320;
+    --font-color02: #F8F8F8;
+    --title-font:'Lateef', serif;
+    --text-font: 'KoHo', sans-serif;
+    --title-padding:15%;
+}
+
+/*PENSINE*/
+
+.pensine{
+    color:aqua;
+    /* background: linear-gradient(180deg, #FFFFFF 0%, rgba(163, 159, 168, 0.804688) 2.6%, rgba(19, 10, 33, 0.5) 6.66%); */
+    background-image: url('pensine.jpg');
+}
