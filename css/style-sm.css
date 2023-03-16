@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     border: 0;
-    /* line-height: 0.5rem; >> broke the contact section, is it possible to remove it? */
 }
 
 :root {
@@ -11,12 +10,12 @@
     --font-color01: #090320;
     --font-color02: #F8F8F8;
     --title-font: 'Lateef', serif;
-    --text-size-h1: 55px;
-    --text-size-h2: 27px;
+    --text-size-h2: 55px;
+    --text-size-h3: 27px;
 
     /* added by léa */
-    --letter-spacing-h1: 0.15em;
-    --font-weight-h1: 400;
+    --letter-spacing-h2: 0.15em;
+    --font-weight-h2: 400;
 
     --text-font: 'KoHo', sans-serif;
     --text-size-p: 15px;
@@ -25,7 +24,7 @@
 
 /*PENSINE*/
 
-h1 {
+.contact h2 {
     font-family: var(--title-font);
     font-size: var(--text-size-h1);
     letter-spacing: var(--letter-spacing-h1);
