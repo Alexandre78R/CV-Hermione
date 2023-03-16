@@ -24,13 +24,6 @@
 
 /*PENSINE*/
 
-.contact h2 {
-    font-family: var(--title-font);
-    font-size: var(--text-size-h1);
-    letter-spacing: var(--letter-spacing-h1);
-    font-weight: var(--font-weight-h1);
-}
-
 .pensine {
     /* color:aqua; */
     /* background: linear-gradient(180deg, #FFFFFF 0%, rgba(163, 159, 168, 0.804688) 2.6%, rgba(19, 10, 33, 0.5) 6.66%); */
@@ -48,8 +41,34 @@
     /* backdrop-filter: blur(70px); >> TBD */
 }
 
-.contact h1 {
-    padding-top: 105px;
+
+.arrow-1 {
+    border: solid var(--primary-color);
+    opacity: 0.7;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 0.25rem;
+    transform: rotate(45deg);
+    margin-top: 1rem;
+    margin-bottom: -0.5rem;
+}
+
+.arrow-2 {
+    border: solid var(--primary-color);
+    opacity: 0.7;
+    border-width: 0px 3px 3px 0;
+    display: inline-block;
+    padding: 0.5rem;
+    transform: rotate(45deg);
+}
+
+.contact h2 {
+    font-family: var(--title-font);
+    font-size: var(--text-size-h2);
+    letter-spacing: var(--letter-spacing-h2);
+    font-weight: var(--font-weight-h2);
+    padding-top: 4rem;
+    margin-bottom: 1rem;
 }
 
 .contact input {
@@ -83,6 +102,14 @@
     border: 2px solid rgba(233, 233, 233, 0.7);
     border-radius: 10px;
     color: var(--font-color02);
+}
+
+div.hedwige {
+    background-image: url(/img/Hedwige.png);
+    width: 77px;
+    height: 73px;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .footer {
