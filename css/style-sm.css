@@ -1,27 +1,91 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     border: 0;
-    line-height: 0.5rem;
 }
 
-:root{
+:root {
     --primary-color: #F8F8F8;
     --font-color01: #090320;
     --font-color02: #F8F8F8;
-    --title-font:'Lateef', serif;
-    --text-size-h1:55px;
-    --text-size-h2:27px;
+    --title-font: 'Lateef', serif;
+    --text-size-h2: 55px;
+    --text-size-h3: 27px;
+
+    /* added by léa */
+    --letter-spacing-h2: 0.15em;
+    --font-weight-h2: 400;
+
     --text-font: 'KoHo', sans-serif;
-    --text-size-p:15px;
-    --title-padding:15%;
+    --text-size-p: 15px;
+    --title-padding: 15%;
 }
 
 /*PENSINE*/
 
-.pensine{
-    color:aqua;
+.contact h2 {
+    font-family: var(--title-font);
+    font-size: var(--text-size-h1);
+    letter-spacing: var(--letter-spacing-h1);
+    font-weight: var(--font-weight-h1);
+}
+
+.pensine {
+    /* color:aqua; */
     /* background: linear-gradient(180deg, #FFFFFF 0%, rgba(163, 159, 168, 0.804688) 2.6%, rgba(19, 10, 33, 0.5) 6.66%); */
     background-image: url('pensine.jpg');
+}
+
+.contact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--font-color02);
+    font-family: var(--text-font);
+    background: linear-gradient(180deg, #2B2F53 6.15%, rgba(165, 164, 181, 0.5) 100%);
+    /* backdrop-filter: blur(70px); >> TBD */
+}
+
+.contact h1 {
+    padding-top: 105px;
+}
+
+.contact input {
+    width: 244px;
+    height: 40px;
+    margin: 0.3rem 0 1.25rem 0;
+    background-color: rgba(228, 228, 228, 0.2);
+    border: 2px solid rgba(233, 233, 233, 0.7);
+    border-radius: 10px;
+}
+
+.contact textarea {
+    width: 244px;
+    margin: 0.3rem 0 1.25rem 0;
+    border-radius: 10px;
+    background-color: rgba(228, 228, 228, 0.2);
+    border: 2px solid rgba(233, 233, 233, 0.7);
+}
+
+.contact ::placeholder {
+    text-align: center;
+    font-size: var(--text-size-p);
+    color: var(--primary-color);
+    opacity: 0.5;
+}
+
+.contact button {
+    width: 72.19px;
+    height: 30px;
+    background-color: rgba(228, 228, 228, 0.2);
+    border: 2px solid rgba(233, 233, 233, 0.7);
+    border-radius: 10px;
+    color: var(--font-color02);
+}
+
+.footer {
+    color: var(--font-color01);
+    padding: 1rem;
 }
