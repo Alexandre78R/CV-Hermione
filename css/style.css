@@ -10,46 +10,50 @@
     --font-color01: #090320;
     --font-color02: #F8F8F8;
     --title-font: 'Lateef', serif;
-    /* --text-size-h2: 55px;
-    --text-size-h3: 27px; */
-
-    /* added by léa */
-    /* --letter-spacing-h2: 0.15em; */
-    /* --font-weight-h2: 400; */
-
+    --text-size-h2: 55px;
+    --text-size-h3: 27px;
+    --letter-spacing-h2: 0.15em;
+    --font-weight-h2: 400;
     --text-font: 'KoHo', sans-serif;
-    /* --text-size-p: 15px;
-    --title-padding: 15%; */
+    --text-size-p: 15px;
+    --title-padding: 15%;
 }
 
-/* Skills Sort */
+/* Skills */
 .skills {
-    background-color: red;
+    background-color: var(--primary-color);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 1px;
     grid-row-gap: 1px;
+}
+
+.skill {
     text-align: center;
 }
 
 .skill img {
     width: 100px;
-    margin-left: 25%;
+    opacity: 0.8;
 }
 
 .skill p {
-    display: grid;
     font-family: var(--text-font);
     font-style: normal;
-    max-width: 17ch;
-    font-size: 14px;
-    line-height: 20px;
-    margin-left: 50%;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 30px;
+    min-width:17ch;
+    max-width:17ch;
+    text-align:center;
+    margin:0 auto;
     margin-bottom: 10%;
 }
 
 .skill h3 {
     font-family: var(--title-font);
-    margin-left: 25%;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 58px;
 }
