@@ -10,13 +10,51 @@
     --font-color01: #090320;
     --font-color02: #F8F8F8;
     --title-font: 'Lateef', serif;
+    --title-size: 60px;
     --text-size-h2: 55px;
     --text-size-h3: 27px;
     --letter-spacing-h2: 0.15em;
     --font-weight-h2: 400;
     --text-font: 'KoHo', sans-serif;
     --text-size-p: 15px;
-    --title-padding: 15%;
+    --title-padding: 10%;
+}
+
+/* PORTRAIT */
+.portrait  {
+  background-image: url("/img/Hermione.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 0 0 2rem 2rem;
+  box-shadow: 2rem 2rem 5rem 0 rgba(0,0,0,0.3);
+  position:relative;
+  height: 40rem;
+}
+.portrait h1{
+  font-family: var(--title-font);
+  font-size: var(--title-size);
+  font-weight: var(--font-weight-h2);
+  color: var(--font-color02);
+  display: flex;
+  flex-direction: column;
+}
+.portrait h1 span{
+  color: var(--font-color02);
+  opacity: 0.8;
+}
+.portrait hr{
+  border-top: 2px solid rgb(255, 255, 255);
+  width: 15rem;
+  margin: 0.25rem 1rem;
+}
+.portrait p {
+  text-align: right;
+  width: 100%;
+  font-family: var(--text-font);
+  font-style: italic;
+  font-size: var(--text-size-p);
+  color: var(--font-color02);
 }
 
 /* Skills */
@@ -59,7 +97,6 @@
 
 .about_me {
     border: solid red 1px;
-    background-color: var(--primary-color);
     height: 349px;
     width: 100%;
     color: var(--font-color01);
@@ -107,15 +144,14 @@
 
 
 /*PENSINE*/
-/* .vertical-line {
+.vertical-line {
   border-left: 0.2rem solid rgb(0, 0, 0);
-  height: 500px;
+  height: 64rem;
   position: absolute;
   left: 50%;
   margin-left: -1px;
-  top: 0;   
-} */
-
+}
+/* .arrow-top{} */
 .drop {
     position: absolute;
     display: flex;
@@ -126,10 +162,27 @@
     height: 22rem;
     padding-top: 3rem;
 }
-
 .drop img {
     width: 2rem;
     height: 2rem;
+} 
+.dot {
+  position: absolute;
+  margin-top: 27rem;
+  left: 48.5%;
+  height: 0.75rem;
+  width: 0.75rem;
+  background-color: #000000;
+  border-radius: 50%;
+}
+.dot2 {
+  position: absolute;
+  margin-top: -3rem;
+  left: 48.5%;
+  height: 0.75rem;
+  width: 0.75rem;
+  background-color: #000000;
+  border-radius: 50%;
 }
 
 .pensine {
@@ -182,6 +235,8 @@
     letter-spacing: 0.1em;
 }
 
+.contact .directional-arrow-top,
+
 /*BLUR*/
 .index3 {
     z-index: 3;
@@ -222,6 +277,7 @@
 }
 
 /* .contact .directional-arrow-top,
+>>>>>>> 482103b82af50b0014db77006be8c2c351aec3c0
 .directional-arrow-bottom {
     border: solid var(--primary-color);
     opacity: 0.7;
