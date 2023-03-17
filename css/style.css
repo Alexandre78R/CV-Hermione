@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+:root {
+    --primary-color: #F8F8F8;
+    --font-color01: #090320;
+    --font-color02: #F8F8F8;
+    --title-font: 'Lateef', serif;
+    /* --text-size-h2: 55px;
+    --text-size-h3: 27px; */
+
+    /* added by léa */
+    /* --letter-spacing-h2: 0.15em; */
+    /* --font-weight-h2: 400; */
+
+    --text-font: 'KoHo', sans-serif;
+    /* --text-size-p: 15px;
+    --title-padding: 15%; */
+}
+
+/* Skills Sort */
+.skills {
+    background-color: red;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 1px;
+    grid-row-gap: 1px;
+    text-align: center;
+}
+
+.skill img {
+    width: 100px;
+    margin-left: 25%;
+}
+
+.skill p {
+    display: grid;
+    font-family: var(--text-font);
+    font-style: normal;
+    max-width: 17ch;
+    font-size: 14px;
+    line-height: 20px;
+    margin-left: 50%;
+    margin-bottom: 10%;
+}
+
+.skill h3 {
+    font-family: var(--title-font);
+    margin-left: 25%;
+}
