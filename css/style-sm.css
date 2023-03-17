@@ -40,7 +40,7 @@
     font-family: var(--text-font);
     letter-spacing: 0.1em;
     background: linear-gradient(180deg, #2B2F53 6.15%, rgba(165, 164, 181, 0.5) 100%);
-    /* backdrop-filter: blur(70px); >> TBD */
+    backdrop-filter: blur(70px);
 }
 
 .contact .directional-arrow-top,
@@ -120,11 +120,11 @@ button {
 
 /* ARROWS */
 .contact .arrow-container {
-    width: 19rem;
-    height: auto;
+    width: 16rem;
+    /* height: auto; */
     /* background-color: bisque; */
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1px 1fr 1px;
     grid-template-rows: 1fr;
 }
 
@@ -140,6 +140,7 @@ button {
 .contact .arrow-container .arrow-left,
 .arrow-right {
     height: 0;
+    width: 2px;
     border-top: 6px solid transparent;
     border-bottom: 6px solid transparent;
 }
