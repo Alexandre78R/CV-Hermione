@@ -22,6 +22,35 @@
     --title-padding: 15%;
 }
 
+/* Skills Sort */
+.skills {
+    background-color: blue;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 1px;
+    grid-row-gap: 1px;
+    text-align: center;
+}
+
+.skill img {
+    width: 100px;
+}
+
+.skill p {
+    display: grid;
+    font-family: var(--text-font);
+    font-style: normal;
+    max-width: 17ch;
+    font-size: 14px;
+    line-height: 20px;
+    margin-left: 20%;
+    margin-bottom: 30%;
+}
+
+.skill h3 {
+    font-family: var(--title-font);
+}
 /*PENSINE*/
 
 .contact h2 {
