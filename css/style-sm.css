@@ -19,9 +19,9 @@
     --title-padding: 15%;
 }
 
-/* Skills Sort */
+/* Skills */
 .skills {
-    background-color: blue;
+    background-color: var(--primary-color);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -32,21 +32,27 @@
 
 .skill img {
     width: 100px;
+    opacity: 0.8;
 }
 
 .skill p {
-    display: grid;
     font-family: var(--text-font);
     font-style: normal;
-    max-width: 17ch;
+    min-width:17ch;
+    max-width:17ch;
+    text-align:center;
+    margin:0 auto;
     font-size: 14px;
     line-height: 20px;
-    margin-left: 20%;
-    margin-bottom: 30%;
+    margin-bottom: 20%;
 }
 
 .skill h3 {
     font-family: var(--title-font);
+    line-height: 39px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 27px;
 }
 
 /* 🌸 ABOUT ME SECTION NAO 🌸 */
@@ -119,10 +125,12 @@
     height: 22rem;
     padding-top: 3rem;
 }
-img{
+
+.drop img{
     width: 2rem;
     height: 2rem;
 }
+
 .pensine {
   width: 100%;
   height: 45rem;
