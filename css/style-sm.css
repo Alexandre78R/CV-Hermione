@@ -22,44 +22,58 @@
 
 /* PORTRAIT */
 .portrait  {
+  width: 100%;
   background-image: url("/img/Hermione.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 0 0 2rem 2rem;
   box-shadow: 2rem 2rem 5rem 0 rgba(0,0,0,0.3);
-  position:relative;
   height: 40rem;
 }
+.portrait h1 hr{
+  border-bottom: 1px solid rgb(255, 255, 255);
+  width: 14rem;
+}
 .portrait h1{
+  position: absolute;
   font-family: var(--title-font);
   font-size: var(--title-size);
   font-weight: var(--font-weight-h2);
   color: var(--font-color02);
-  display: flex;
-  flex-direction: column;
+  left: 5%;
+  margin-top: 22.5rem;
+  line-height: 70%;
 }
 .portrait h1 span{
+  padding-left: 2rem;
   color: var(--font-color02);
   opacity: 0.8;
 }
-.portrait hr{
-  border-top: 2px solid rgb(255, 255, 255);
-  width: 15rem;
-  margin: 0.25rem 1rem;
+.citation {
+  position: absolute;
+  right:6%;
+  margin-top: 29rem;
+  /* border-bottom: 2px solid white; */
 }
-.portrait p {
-  text-align: right;
-  width: 100%;
+.citation p{
   font-family: var(--text-font);
   font-style: italic;
-  font-size: var(--text-size-p);
+  font-size: 1.25rem;
   color: var(--font-color02);
+  text-align: right;
+  width: 11rem;
+  padding-bottom: 0.75rem;
+}
+
+.citation hr{
+  border-bottom: 1px solid rgb(255, 255, 255);
+  width: 11rem;
 }
 
 /* Skills */
 .skills {
-    background-color: var(--primary-color);
+    /* background-color: var(--primary-color); */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -144,14 +158,22 @@
 
 
 /*PENSINE*/
+
+/* VERTICAL LINE START */
 .vertical-line {
+  opacity: 0.9;
   border-left: 0.2rem solid rgb(0, 0, 0);
-  height: 64rem;
+  height: 59.5rem;
   position: absolute;
   left: 50%;
-  margin-left: -1px;
+  margin-left: -2px;
 }
-/* .arrow-top{} */
+.arrow-top{
+  margin-left: -0.35rem;
+  border-top : 0.5rem solid rgb(0, 0, 0);
+  border-right : 0.25rem solid transparent;
+  border-left : 0.25rem solid transparent;
+}
 .drop {
     position: absolute;
     display: flex;
@@ -163,28 +185,27 @@
     padding-top: 3rem;
 }
 .drop img {
+    opacity: 0.9;
     width: 2rem;
     height: 2rem;
 } 
-.dot {
+.dot, .dot2 {
+  opacity: 0.9;
   position: absolute;
-  margin-top: 27rem;
-  left: 48.5%;
   height: 0.75rem;
   width: 0.75rem;
   background-color: #000000;
   border-radius: 50%;
+}
+.dot {
+  transform: translateX(-50%);
+  bottom: 0;
 }
 .dot2 {
-  position: absolute;
-  margin-top: -3rem;
-  left: 48.5%;
-  height: 0.75rem;
-  width: 0.75rem;
-  background-color: #000000;
-  border-radius: 50%;
+  transform: translateX(-50%);
+  margin-top: 30rem;
 }
-
+/* VERTICAL LINE END */
 .pensine {
     width: 100%;
     height: 45rem;
@@ -250,7 +271,7 @@
     margin-top: 18rem;
     backdrop-filter: blur(10px);
     width: 100%;
-    height: 53rem;
+    height: 49rem;
     border-radius: 2rem 2rem 0 0;
 }
 
@@ -258,7 +279,7 @@
     position: absolute;
     z-index: 0;
     width: 100%;
-    height: 51rem;
+    height: 47rem;
     background: linear-gradient(180deg, #2B2F53 6.15%, rgba(165, 164, 181, 0.5) 100%);
     background-size: cover;
     background-position: center;
@@ -277,7 +298,6 @@
 }
 
 /* .contact .directional-arrow-top,
->>>>>>> 482103b82af50b0014db77006be8c2c351aec3c0
 .directional-arrow-bottom {
     border: solid var(--primary-color);
     opacity: 0.7;
@@ -322,7 +342,7 @@ button {
     width: 244px;
     background-color: rgba(228, 228, 228, 0.2);
     border: 2px solid rgba(233, 233, 233, 0.7);
-    border-radius: 10px;
+    border-radius: 8px;
     letter-spacing: 0.1em;
     font-family: var(--text-font);
     font-size: var(--text-size-p);
@@ -350,8 +370,8 @@ button {
 }
 
 .contact form button {
-    width: 72.19px;
-    height: 30px;
+    width: 4.5rem;
+    height: 1.5rem;
     color: var(--font-color02);
     margin-bottom: 3rem;
 }
@@ -384,5 +404,6 @@ button {
 
 .contact .footer {
     color: var(--font-color01);
-    padding: 2rem;
+    padding: 1rem;
+    text-align: center;
 }
