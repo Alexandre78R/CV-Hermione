@@ -10,18 +10,22 @@
     --font-color01: #090320;
     --font-color02: #F8F8F8;
     --title-font: 'Lateef', serif;
-    --text-size-h2: 55px;
-    --text-size-h3: 27px;
+
+    /* updated by Léa : */
+    --text-size-h2: 80px;
+    --text-size-h3: 40px;
+
     --letter-spacing-h2: 0.15em;
     --font-weight-h2: 400;
     --text-font: 'KoHo', sans-serif;
-    --text-size-p: 15px;
+    /* updated by Léa : */
+    --text-size-p: 23px;
     --title-padding: 15%;
 }
 
 /* Skills */
 .skills {
-    background-color: var(--primary-color);
+    /* background-color: var(--primary-color); */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -44,10 +48,10 @@
     font-weight: 400;
     font-size: 23px;
     line-height: 30px;
-    min-width:17ch;
-    max-width:17ch;
-    text-align:center;
-    margin:0 auto;
+    min-width: 17ch;
+    max-width: 17ch;
+    text-align: center;
+    margin: 0 auto;
     margin-bottom: 10%;
 }
 
@@ -56,4 +60,118 @@
     font-weight: 400;
     font-size: 40px;
     line-height: 58px;
+}
+
+/*CONTACT*/
+
+.contact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--font-color01);
+    font-family: var(--text-font);
+    letter-spacing: 0.1em;
+}
+
+.contact h2 {
+    font-family: var(--title-font);
+    font-size: var(--text-size-h2);
+    letter-spacing: var(--letter-spacing-h2);
+    font-weight: var(--font-weight-h2);
+    display: flex;
+    justify-content: center;
+    padding-top: 4rem;
+    margin-bottom: 1rem;
+}
+
+/* FORM */
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--text-size-h3);
+}
+
+.contact form input,
+textarea,
+button {
+    display: flex;
+    width: 376px;
+    border: 2px solid rgba(233, 233, 233, 0.7);
+    border-radius: 10px;
+    letter-spacing: 0.1em;
+    font-family: var(--text-font);
+    font-size: var(--text-size-p);
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.contact form label {
+    font-family: var(--text-font);
+    font-size: var(--text-size-p);
+}
+
+.contact form input {
+    height: 50px;
+    margin: 1.3rem 0 2.25rem 0;
+}
+
+.contact form textarea {
+    height: 150px;
+    margin: 1.3rem 0 3.25rem 0;
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+
+.contact form ::placeholder {
+    text-align: center;
+    font-size: var(--text-size-p);
+    opacity: 0.5;
+}
+
+.contact form button {
+    width: 91px;
+    height: 36px;
+    color: var(--font-color01);
+    margin-bottom: 8rem;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+/* HEDWIDGE */
+.contact .hedwige {
+    display: flex;
+    justify-content: center;
+}
+
+.contact .hedwige img {
+    height: 5.5rem;
+    margin-bottom: -0.3rem;
+}
+
+/* ARROW */
+.contact .arrow-container {
+    display: flex;
+    justify-content: center;
+}
+
+.contact .arrow-container img {
+    width: 73%;
+    height: 0.5rem;
+}
+
+/* FOOTER */
+
+.contact .footer {
+    display: flex;
+    justify-content: center;
+}
+
+.contact .footer .copyright p {
+    color: var(--font-color01);
+    font-size: var(--text-size-p);
+    padding: 2rem;
 }
