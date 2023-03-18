@@ -213,11 +213,14 @@
 
 .contact .directional-arrow {
     height: 3px;
+    width: 1.5rem;
     background-image: url(/img/doubles-fleches.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    color: white;
+    position: absolute;
+    left: 50%;
+    filter: invert(100%);
     transform: rotate(90deg);
 }
 
