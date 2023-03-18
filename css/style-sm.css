@@ -287,35 +287,21 @@
 
 /*ARROWS*/
 
-.contact .directional-arrow {
-    height: 3px;
+.contact .directional-arrows-container {
+    display: flex;
+    justify-content: center;
+}
+
+.contact .directional-arrows {
     background-image: url(/img/doubles-fleches.png);
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    color: white;
+    background-size: cover;
+    width: 1.5rem;
+    height: 1.5rem;
+    filter: invert(100%);
     transform: rotate(90deg);
+    opacity: 0.8;
 }
-
-/* .contact .directional-arrow-top,
-.directional-arrow-bottom {
-    border: solid var(--primary-color);
-    opacity: 0.7;
-    display: inline-block;
-    transform: rotate(45deg);
-}
-
-.contact .directional-arrow-top {
-    border-width: 0 2px 2px 0;
-    padding: 0.25rem;
-    margin-top: 1rem;
-    margin-bottom: -0.5rem;
-}
-
-.contact .directional-arrow-bottom {
-    border-width: 0px 3px 3px 0;
-    padding: 0.5rem;
-} */
 
 /*SECTION TITLE*/
 
@@ -324,6 +310,8 @@
     font-size: var(--text-size-h2);
     letter-spacing: var(--letter-spacing-h2);
     font-weight: var(--font-weight-h2);
+    display: flex;
+    justify-content: center;
     padding-top: 4rem;
     margin-bottom: 1rem;
 }
@@ -377,32 +365,30 @@ button {
 }
 
 /* HEDWIDGE */
-
 .contact .hedwige {
-    width: 100%;
-    height: 3.5rem;
-    margin-bottom: -0.3rem;
-    background-image: url(/img/Hedwige.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+    display: flex;
+    justify-content: center;
 }
 
-/* ARROWS */
+.contact .hedwige img {
+    height: 3.5rem;
+    margin-bottom: -0.3rem;
+}
 
+/* ARROW */
 .contact .arrow-container {
+    display: flex;
+    justify-content: center;
+}
+
+.contact .arrow-container img {
     width: 45%;
     height: 0.5rem;
-    margin: 0 auto;
-    background-image: url(/img/Hedwige_arrow.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center
 }
 
 /* FOOTER */
 
-.contact .footer {
+.contact .footer .copyright p {
     color: var(--font-color01);
     padding: 1rem;
     text-align: center;
