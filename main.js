@@ -17,7 +17,6 @@ arrowL.onclick=function(){
     if(position<0)
         position++;
     carouselBox.style.transform="translate("+position*document.body.clientWidth+"px)";
-   
     afficherMasquer();
 }
 addEventListener("resize", () => {
