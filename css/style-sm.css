@@ -21,6 +21,7 @@
 }
 
 /* PORTRAIT */
+
 .portrait  {
   width: 100%;
   background-image: url("/img/Hermione.jpg");
@@ -31,9 +32,27 @@
   box-shadow: 2rem 2rem 5rem 0 rgba(0,0,0,0.3);
   height: 40rem;
 }
+
 .portrait h1 hr{
+    margin-bottom: 0.5rem;
   border-bottom: 1px solid rgb(255, 255, 255);
   width: 14rem;
+}
+.arrow-right{
+    position: absolute;
+    margin-top: 22.35rem;
+    left: 3%;
+    border-top : 0.2rem solid transparent;
+    border-bottom : 0.2rem solid transparent;
+    border-left : 0.5rem solid rgb(255, 255, 255);
+}
+.arrow-left{
+    position: absolute;
+    margin-top: 34.37rem;
+    right: 4%;
+    border-top : 0.2rem solid transparent;
+    border-bottom : 0.2rem solid transparent;
+    border-right : 0.5rem solid rgb(255, 255, 255);
 }
 .portrait h1{
   position: absolute;
@@ -50,11 +69,18 @@
   color: var(--font-color02);
   opacity: 0.8;
 }
+.portrait img{
+    position: absolute;
+    margin-top: 36.5rem;
+    left: 50%;
+    width: 1.5rem;
+    opacity: 0.8;
+    filter: invert(100%);
+}
 .citation {
   position: absolute;
   right:6%;
   margin-top: 29rem;
-  /* border-bottom: 2px solid white; */
 }
 .citation p{
   font-family: var(--text-font);
@@ -65,15 +91,14 @@
   width: 11rem;
   padding-bottom: 0.75rem;
 }
-
 .citation hr{
   border-bottom: 1px solid rgb(255, 255, 255);
   width: 11rem;
 }
 
-/* Skills */
+/* SKILLS */
+
 .skills {
-    /* background-color: var(--primary-color); */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -161,10 +186,10 @@
 
 /* VERTICAL LINE START */
 .vertical-line {
+  position: absolute;
+  height: 59.5rem;
   opacity: 0.9;
   border-left: 0.2rem solid rgb(0, 0, 0);
-  height: 59.5rem;
-  position: absolute;
   left: 50%;
   margin-left: -2px;
 }
@@ -190,7 +215,6 @@
     height: 2rem;
 } 
 .dot, .dot2 {
-  opacity: 0.9;
   position: absolute;
   height: 0.75rem;
   width: 0.75rem;
