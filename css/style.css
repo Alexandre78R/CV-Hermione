@@ -57,14 +57,101 @@
 
 .skill h3 {
     font-family: var(--title-font);
-    font-weight: 400;
+    font-weight: 500;
     font-size: 40px;
     line-height: 58px;
 }
 
+
+/*PENSINE*/
+
+/* VERTICAL LINE START */
+.vertical-line {
+    position: absolute;
+    height: 90rem;
+    opacity: 0.9;
+    border-left: 0.2rem solid rgb(0, 0, 0);
+    left: 50%;
+    margin-left: -2px;
+  }
+  .arrow-top{
+    margin-left: -0.6rem;
+    border-top: 1rem solid rgb(0, 0, 0);
+    border-right: 0.5rem solid transparent;
+    border-left: 0.5rem solid transparent;
+  }
+  .drop {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 28rem;
+      margin-top: 9rem;
+      padding-top: 3rem;
+  }
+  .drop img {
+      opacity: 0.9;
+      width: 2rem;
+      height: 2rem;
+  } 
+  .dot, .dot2 {
+    position: absolute;
+    height: 0.75rem;
+    width: 0.75rem;
+    background-color: #000000;
+    border-radius: 50%;
+  }
+  .dot {
+    transform: translateX(-50%);
+    bottom: 0;
+  }
+  .dot2 {
+    transform: translateX(-50%);
+    margin-top: 43rem;
+  }
+
+  /* VERTICAL LINE END */
+
+  .pensine{
+    margin-top: 6rem;
+  }
+
+  .grid {
+      width: 100%;
+      display: grid;
+      justify-content: space-evenly;
+      align-items: center;
+      text-align: center;
+      padding-top: 6rem;
+      grid-template-columns: repeat(2, 15rem);
+      grid-template-rows: repeat(3, 2.5rem);
+      gap: 9rem 7rem;
+  }
+  
+  .grid p {
+      font-family: var(--text-font);
+      font-size: var(--text-size-p);
+      color: var(--font-color01);
+  }
+  
+  .grid hr {
+      border-top: 2px solid rgb(24, 24, 24);
+      width: 10rem;
+      margin: 0.5rem 2.5rem;
+  }
+  
+  .grid span {
+      font-family: var(--text-font);
+      font-size: 15px;
+      color: rgb(46, 46, 46);
+  }
+
 /*CONTACT*/
 
 .contact {
+    margin-top: 14rem;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -82,7 +169,7 @@
     display: flex;
     justify-content: center;
     padding-top: 4rem;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
 }
 
 /* FORM */
