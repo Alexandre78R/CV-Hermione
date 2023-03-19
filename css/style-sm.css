@@ -10,18 +10,95 @@
     --font-color01: #090320;
     --font-color02: #F8F8F8;
     --title-font: 'Lateef', serif;
+    --title-size: 60px;
     --text-size-h2: 55px;
     --text-size-h3: 27px;
     --letter-spacing-h2: 0.15em;
     --font-weight-h2: 400;
     --text-font: 'KoHo', sans-serif;
     --text-size-p: 15px;
-    --title-padding: 15%;
+    --title-padding: 10%;
 }
 
-/* Skills */
+/* PORTRAIT */
+
+.portrait  {
+  width: 100%;
+  background-image: url("/img/Hermione.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 0 0 2rem 2rem;
+  box-shadow: 2rem 2rem 5rem 0 rgba(0,0,0,0.3);
+  height: 40rem;
+}
+
+.portrait h1 hr{
+    margin-bottom: 0.5rem;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  width: 14rem;
+}
+.arrow-right{
+    position: absolute;
+    margin-top: 22.35rem;
+    left: 3%;
+    border-top : 0.2rem solid transparent;
+    border-bottom : 0.2rem solid transparent;
+    border-left : 0.5rem solid rgb(255, 255, 255);
+}
+.arrow-left{
+    position: absolute;
+    margin-top: 34.37rem;
+    right: 4%;
+    border-top : 0.2rem solid transparent;
+    border-bottom : 0.2rem solid transparent;
+    border-right : 0.5rem solid rgb(255, 255, 255);
+}
+.portrait h1{
+  position: absolute;
+  font-family: var(--title-font);
+  font-size: var(--title-size);
+  font-weight: var(--font-weight-h2);
+  color: var(--font-color02);
+  left: 5%;
+  margin-top: 22.5rem;
+  line-height: 70%;
+}
+.portrait h1 span{
+  padding-left: 2rem;
+  color: var(--font-color02);
+  opacity: 0.8;
+}
+.portrait img{
+    position: absolute;
+    margin-top: 36.5rem;
+    left: 50%;
+    width: 1.5rem;
+    opacity: 0.8;
+    filter: invert(100%);
+}
+.citation {
+  position: absolute;
+  right:6%;
+  margin-top: 29rem;
+}
+.citation p{
+  font-family: var(--text-font);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--font-color02);
+  text-align: right;
+  width: 11rem;
+  padding-bottom: 0.75rem;
+}
+.citation hr{
+  border-bottom: 1px solid rgb(255, 255, 255);
+  width: 11rem;
+}
+
+/* SKILLS */
+
 .skills {
-    background-color: var(--primary-color);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -59,7 +136,6 @@
 
 .about_me {
     border: solid red 1px;
-    background-color: var(--primary-color);
     height: 349px;
     width: 100%;
     color: var(--font-color01);
@@ -107,15 +183,22 @@
 
 
 /*PENSINE*/
-/* .vertical-line {
-  border-left: 0.2rem solid rgb(0, 0, 0);
-  height: 500px;
-  position: absolute;
-  left: 50%;
-  margin-left: -1px;
-  top: 0;   
-} */
 
+/* VERTICAL LINE START */
+.vertical-line {
+  position: absolute;
+  height: 59.5rem;
+  opacity: 0.9;
+  border-left: 0.2rem solid rgb(0, 0, 0);
+  left: 50%;
+  margin-left: -2px;
+}
+.arrow-top{
+  margin-left: -0.35rem;
+  border-top : 0.5rem solid rgb(0, 0, 0);
+  border-right : 0.25rem solid transparent;
+  border-left : 0.25rem solid transparent;
+}
 .drop {
     position: absolute;
     display: flex;
@@ -126,12 +209,27 @@
     height: 22rem;
     padding-top: 3rem;
 }
-
 .drop img {
+    opacity: 0.9;
     width: 2rem;
     height: 2rem;
+} 
+.dot, .dot2 {
+  position: absolute;
+  height: 0.75rem;
+  width: 0.75rem;
+  background-color: #000000;
+  border-radius: 50%;
 }
-
+.dot {
+  transform: translateX(-50%);
+  bottom: 0;
+}
+.dot2 {
+  transform: translateX(-50%);
+  margin-top: 30rem;
+}
+/* VERTICAL LINE END */
 .pensine {
     width: 100%;
     height: 45rem;
@@ -182,6 +280,8 @@
     letter-spacing: 0.1em;
 }
 
+.contact .directional-arrow-top,
+
 /*BLUR*/
 .index3 {
     z-index: 3;
@@ -195,7 +295,7 @@
     margin-top: 18rem;
     backdrop-filter: blur(10px);
     width: 100%;
-    height: 53rem;
+    height: 49rem;
     border-radius: 2rem 2rem 0 0;
 }
 
@@ -203,7 +303,7 @@
     position: absolute;
     z-index: 0;
     width: 100%;
-    height: 51rem;
+    height: 47rem;
     background: linear-gradient(180deg, #2B2F53 6.15%, rgba(165, 164, 181, 0.5) 100%);
     background-size: cover;
     background-position: center;
@@ -254,7 +354,7 @@ button {
     width: 244px;
     background-color: rgba(228, 228, 228, 0.2);
     border: 2px solid rgba(233, 233, 233, 0.7);
-    border-radius: 10px;
+    border-radius: 8px;
     letter-spacing: 0.1em;
     font-family: var(--text-font);
     font-size: var(--text-size-p);
@@ -282,8 +382,8 @@ button {
 }
 
 .contact form button {
-    width: 72.19px;
-    height: 30px;
+    width: 4.5rem;
+    height: 1.5rem;
     color: var(--font-color02);
     margin-bottom: 3rem;
 }
@@ -314,5 +414,6 @@ button {
 
 .contact .footer .copyright p {
     color: var(--font-color01);
-    padding: 2rem;
+    padding: 1rem;
+    text-align: center;
 }
