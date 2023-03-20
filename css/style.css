@@ -23,6 +23,101 @@
     --title-padding: 15%;
 }
 
+/* PORTRAIT */
+
+.portrait  {
+    width: 35%;
+    /* height: 100%; */
+    position: fixed;
+    /* display: flex; */
+
+    top: 0;
+    left: 0;
+    /* width: 25.5%; */
+    height: 100%;
+    background-color: #fff;
+    /* z-index: 100; */
+    background-image: url("/img/Hermione.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* border-radius: 0 0 2rem 2rem;
+    box-shadow: 0 2rem 5rem 0 rgba(0,0,0,0.5); */
+}
+
+.portrait h1 hr{
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    width: 14rem;
+}
+
+.arrow-right{
+    position: absolute;
+    margin-top: 22.35rem;
+    left: 3%;
+    border-top : 0.2rem solid transparent;
+    border-bottom : 0.2rem solid transparent;
+    border-left : 0.5rem solid rgb(255, 255, 255);
+}
+.arrow-left{
+    position: absolute;
+    margin-top: 34.37rem;
+    right: 4%;
+    border-top : 0.2rem solid transparent;
+    border-bottom : 0.2rem solid transparent;
+    border-right : 0.5rem solid rgb(255, 255, 255);
+}
+.portrait h1{
+  position: absolute;
+  font-family: var(--title-font);
+  font-size: var(--title-size);
+  font-weight: var(--font-weight-h2);
+  color: var(--font-color02);
+  left: 5%;
+  margin-top: 22.5rem;
+  line-height: 70%;
+}
+.portrait h1 span{
+  padding-left: 2rem;
+  color: var(--font-color02);
+  opacity: 0.8;
+}
+.portrait img{
+    position: absolute;
+    margin-top: 36.5rem;
+    left: 50%;
+    width: 1.5rem;
+    opacity: 0.8;
+    filter: invert(100%);
+}
+.citation {
+  position: absolute;
+  right:6%;
+  margin-top: 29rem;
+}
+.citation p{
+  font-family: var(--text-font);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--font-color02);
+  text-align: right;
+  width: 11rem;
+  padding-bottom: 0.75rem;
+}
+.citation hr{
+  border-bottom: 1px solid rgb(255, 255, 255);
+  width: 11rem;
+}
+
+main {
+    /* display: flex; */
+    /* left: 100%; */
+    /* position: relative; */
+    display: table-cell;
+    position: relative;
+    left: 50%;
+}
+
 /* 🌸 ABOUT ME SECTION NAO 🌸 */
 
 
