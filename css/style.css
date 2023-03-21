@@ -43,14 +43,6 @@
     box-shadow: 0 2rem 5rem 0 rgba(0,0,0,0.5); */
 }
 
-body {
-    /* display : flex; */
-    /* display: grid;
-    grid-template-columns: 1fr 2fr;  */
-    /* grid-template-rows: ; */
-    /* grid-column-gap: 0px;
-    grid-row-gap: 0px; */
-}
 
 .portrait h1 hr{
     margin-bottom: 0.5rem;
@@ -116,27 +108,123 @@ body {
   width: 11rem;
 }
 
-/* .div1 { grid-area: 1 / 2 / 2 / 3; }
-.div2 { grid-area: 1 / 1 / 2 / 2; } */
+
 main {
-    background-color: red;
     display: table;
     position: relative; 
     left : 35%;
     width: 65%;
-    /* width: 100%; */
-    /* right: -40%; */
-    /* grid-area: 1 / 1 / 2 / 2; */
-    /* grid-area: 1 / 2 / 2 / 3; */
-    /* border :  0%; */
-}
-
-header {
-    /* grid-area: 1 / 1 / 2 / 2; */
-    /* grid-area: 1 / 2 / 2 / 3; */
 }
 
 /* 🌸 ABOUT ME SECTION NAO 🌸 */
+.about_me {                 
+    height: 30rem;
+    color: var(--font-color01);
+    display: flex;
+    flex-direction: column;
+}
+
+#title_aboutme{
+    margin-top: 3.31rem;
+    letter-spacing: 0.15em;
+    font-family: var(--title-font);
+    font-size: var(--text-size-h2);
+    height: 5.8rem;
+    text-align: center;
+    margin-bottom: 3.81rem;
+}
+
+#box_overflow{
+    width : 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    overflow: hidden;
+}
+
+#carousel_box{
+    height: 10.668rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    transition: all 0.5s ease;
+}
+
+.item_carousel{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 1 0 100%;
+}
+
+.title_carousel{
+    font-family: var(--title-font);
+    font-size: var(--text-size-h3);
+}
+
+.text_carousel{
+    font-family: var(--text-font);
+    display: flex;
+    max-width: 30.5rem;
+    align-items: flex-end;
+    text-align: center;
+    font-size: var(--text-size-p)
+}
+
+#arrows_aboutMe{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    top: calc(-100% + 90px);
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.arrow_carousel:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.arrow_carousel.disabled, .arrow_carousel.disabled:hover{
+    cursor: default;
+    opacity: 0.5;
+    transform: scale(1);
+}
+.arrow_carousel{
+    cursor: pointer;
+}
+.arrow_carousel{
+    cursor: pointer;
+}
+
+
+#L {
+    height: 0;
+    width: 0;
+
+    transition:all 0.3s ease;
+
+    border-top: solid transparent 0.5rem;
+    border-bottom: solid transparent 0.5rem;
+    border-right: solid var(--font-color01) 1rem;
+}
+
+
+#R {
+    height: 0;
+    width: 0;
+    
+    border-top: solid transparent 0.5rem;
+    border-bottom: solid transparent 0.5rem;
+    border-left: solid var(--font-color01) 1rem;
+    transition:all 0.3s ease;
+   
+}
+
+
+
+
 
 
 /* Skills */

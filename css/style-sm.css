@@ -136,7 +136,7 @@
 
 .about_me {                 
     height: 21.8rem;
-    width: 100%;
+    width: auto;
     color: var(--font-color01);
     display: flex;
     flex-direction: column;
