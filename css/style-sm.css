@@ -22,18 +22,7 @@
 
 /* PORTRAIT */
 
-.portrait {
-    width: 100%;
-    background-image: url("/img/Hermione.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 0 0 2rem 2rem;
-    box-shadow: 2rem 2rem 5rem 0 rgba(0, 0, 0, 0.3);
-    height: 40rem;
-}
-
-.portrait h1 hr {
+.portrait h1 hr{
     margin-bottom: 0.5rem;
     border-bottom: 1px solid rgb(255, 255, 255);
     width: 14rem;
@@ -142,16 +131,15 @@
 
 /* 🌸 ABOUT ME SECTION NAO 🌸 */
 
-.about_me {
-    border: solid red 1px;
-    height: 349px;
+.about_me {                 
+    height: 21.8rem;
     width: 100%;
     color: var(--font-color01);
     display: flex;
     flex-direction: column;
 }
 
-#title_aboutme {
+#title_aboutme{
     margin-top: 52px;
     letter-spacing: 0.15em;
     font-family: var(--title-font);
@@ -161,33 +149,86 @@
     margin-bottom: 43px;
 }
 
-#caroussel_box {
-    height: 197px;
-    width: 100%;
+#box_overflow{
+    width : 100%;
+    overflow: hidden;
 }
 
-#today_box {
+#carousel_box{
+    height: 12.2rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    transition: all 0.5s ease;
+}
+
+.item_carousel{
     display: flex;
     align-items: center;
     flex-direction: column;
+    flex: 1 0 100%;
 }
 
-#title_today {
+
+.title_carousel{
     font-family: var(--title-font);
     font-size: 27px;
-    height: 47px;
 }
 
-#p_today {
+.text_carousel{
     font-family: var(--text-font);
-    width: 312px;
+    width: 19.5rem;
     display: flex;
     align-items: flex-end;
     text-align: center;
-    height: 54px;
     line-height: 21px;
 }
 
+.arrow_carousel{
+    position: absolute;
+    cursor: pointer;
+}
+
+#L {
+    height: 0;
+    width: 0;
+    left: 5%;
+    right: 93%;
+    top: 103%;
+    opacity: 0.5;
+
+    transition:all 0.3s ease;
+
+    border-top: solid transparent 0.45rem;
+    border-bottom: solid transparent 0.45rem;
+    border-right: solid var(--font-color01) 0.7rem;
+}
+
+#L:hover{
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+#R {
+    height: 0;
+    width: 0;
+    
+    border-top: solid transparent 0.45rem;
+    border-bottom: solid transparent 0.45rem;
+    border-left: solid var(--font-color01) 0.7rem;
+    transition:all 0.3s ease;
+   
+
+    left: 93%;
+    right: 7%;
+    top: 103%;
+    opacity: 0.5;
+}
+
+#R:hover{
+    transform: scale(1.2);
+    opacity: 1;
+}
 
 
 /*PENSINE*/
