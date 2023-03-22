@@ -1,11 +1,11 @@
-document.body.onload = function () {
-    nbItems = 5;
-    position = 0;
-    carouselBox = document.getElementById("carousel_box");
-    arrowL = document.getElementById("L");
-    arrowR = document.getElementById("R");
-    itemCarousel = document.getElementsByClassName("item_carousel");
-    boxOverflow = document.getElementById("box_overflow");
+document.body.onload=function(){
+    nbItems=5;
+    position=0;
+    carouselBox=document.getElementById("carousel_box");
+    arrowL=document.getElementById("L");
+    arrowR=document.getElementById("R");
+    itemCarousel=document.getElementsByClassName("item_carousel");
+    boxOverflow=document.getElementById("box_overflow");
     afficherMasquer();
 
     arrowR.onclick = function () {
@@ -38,13 +38,13 @@ document.body.onload = function () {
 
         else
             arrowR.classList.remove("disabled")
-
-        if (position == 0)
-            arrowL.classList.add("disabled")
-
+     
+    if(position==0)
+        arrowL.classList.add("disabled")
+    
         else
             arrowL.classList.remove("disabled")
-    }
+}
 }
 
 // MENU BURGER START 

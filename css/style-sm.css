@@ -25,13 +25,17 @@
 html {
   scroll-behavior: auto;
 }
+<<<<<<< Updated upstream
 
 /* html, body {
+=======
+ html, body {
+>>>>>>> Stashed changes
   overflow-x: hidden;
 }
 body {
   position: relative
-} */
+} 
 
 /* PORTRAIT */
 

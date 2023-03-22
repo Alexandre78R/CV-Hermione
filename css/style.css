@@ -177,7 +177,7 @@ main {
     font-size: var(--text-size-p)
 }
 
-#arrows_aboutMe {
+#arrows_aboutMe{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
