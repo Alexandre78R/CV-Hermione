@@ -133,7 +133,7 @@
 
 .about_me {                 
     height: 21.8rem;
-    width: 100%;
+    width: auto;
     color: var(--font-color01);
     display: flex;
     flex-direction: column;
@@ -184,29 +184,43 @@
     line-height: 21px;
 }
 
+#arrows_aboutMe{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    top: calc(-100% + 60px);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.arrow_carousel:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.arrow_carousel.disabled, .arrow_carousel.disabled:hover{
+    cursor: default;
+    opacity: 0.5;
+    transform: scale(1);
+}
 .arrow_carousel{
-    position: absolute;
+    cursor: pointer;
+}
+.arrow_carousel{
     cursor: pointer;
 }
 
 #L {
     height: 0;
     width: 0;
-    left: 5%;
-    right: 93%;
-    top: 103%;
-    opacity: 0.5;
 
     transition:all 0.3s ease;
 
     border-top: solid transparent 0.45rem;
     border-bottom: solid transparent 0.45rem;
     border-right: solid var(--font-color01) 0.7rem;
-}
-
-#L:hover{
-    transform: scale(1.2);
-    opacity: 1;
 }
 
 #R {
@@ -218,17 +232,8 @@
     border-left: solid var(--font-color01) 0.7rem;
     transition:all 0.3s ease;
    
-
-    left: 93%;
-    right: 7%;
-    top: 103%;
-    opacity: 0.5;
 }
 
-#R:hover{
-    transform: scale(1.2);
-    opacity: 1;
-}
 
 
 /*PENSINE*/
