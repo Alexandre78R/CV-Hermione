@@ -21,73 +21,88 @@
 
 <body>
     <header>
-        <section class="portrait">
-            <div class="arrow-right"></div>
-            <div class="arrow-left"></div>
-            <h1>
-                <hr>HERMIONE <span>GRANGER</span>
-            </h1>
-            <div class="citation">
-                <p>“I mean, it's sort of exciting isn't it ? Breaking the rules.”
-                    <hr>
-                </p>
+        <nav class="navbar">
+            <div class="nav_links">
+                <ul id="navTitle">
+                    <li><a href="#aboutMe">About Me</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#pensine">Pensine</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </div>
-            <img src="/img/doubles-fleches.png">
+            <img src="/img/barre-de-menu.png" class="menu">
+            <div class="menu_burger"></div>
+        </nav>
+        <section class="portrait">
+            <div class="portrait_text">
+                <!-- <div class="arrow-right"></div> -->
+                <!-- <div class="arrow-left"></div> -->
+                <h1>HERMIONE <span>GRANGER</span></h1>
+                <div class="citation">
+                    <p>“I mean, it's sort of exciting isn't it ? Breaking the rules.”</p>
+                </div>
+                <img src="/img/doubles-fleches.png">
+            </div>
         </section>
     </header>
     <main>
-        <section class="about_me">
-
-            <h2 id ="title_aboutme">
+        <section class="about_me" id="aboutMe">
+            <h2 id="title_aboutme">
                 ABOUT ME
             </h2>
-                <div id="box_overflow">
-                    <div id = "carousel_box">
-                        <div class ="item_carousel">
-                            <h3 class="title_carousel">
-                                TODAY
-                            </h3>
-                            <p class="text_carousel">
-                                I'm about to finish my studies at Hogwarts and I'm looking for a meaningfull
-                                and challenging job.
-                            </p>
-                        </div>
-                        <div class="item_carousel">
-                            <h3 class="title_carousel">
-                                BIOGRAPHY
-                            </h3>
-                            <p class="text_carousel">
-                                Born in 1979 from muggle parents, I learned my magical nature at eleven.
-                            </p>
-                        </div>
-                        <div class ="item_carousel">
-                            <h3 class="title_carousel">
-                                MAGIC WANDS
-                            </h3>
-                            <p class="text_carousel">
-                                My wands is 10¾ long, made of vine wood, and possessed a dragon heartstring core. It was manufactured by Garrick Ollivander.
-                            </p>
-                        </div>
-                        <div class="item_carousel">
-                            <h3 class="title_carousel">
-                                PATRONUS
-                            </h3>
-                            <p class="text_carousel">
-                                My patronus is a shining silver otter. The first time I saw it, it was gambolling around me. 'They are sort of nice, aren't they?'
-                            </p>
-                        </div>
-                        <div class="item_carousel">
-                            <h3 class="title_carousel">
-                                PET
-                            </h3>
-                            <p class="text_carousel">
-                                <!-- Crookshanks is my pet cat. He has the ability to solve problems on his own without aid or teaching, and clear dislike of and ability at recognising untrustworthy persons. -->
-                            </p>
-                        </div>
+            <div id="box_overflow">
+                <div id="carousel_box">
+                    <div class="item_carousel">
+                        <h3 class="title_carousel">
+                            TODAY
+                        </h3>
+                        <p class="text_carousel">
+                            I'm about to finish my studies at Hogwarts and I'm looking for a meaningfull
+                            and challenging job.
+                        </p>
                     </div>
+                    <div class="item_carousel">
+                        <h3 class="title_carousel">
+                            BIOGRAPHY
+                        </h3>
+                        <p class="text_carousel">
+                            Born in 1979 from muggle parents, I learned my magical nature at eleven.
+                        </p>
+                    </div>
+                    <div class="item_carousel">
+                        <h3 class="title_carousel">
+                            MAGIC WANDS
+                        </h3>
+                        <p class="text_carousel">
+                            My wands is 10¾ long, made of vine wood, and possessed a dragon heartstring core. It was
+                            manufactured by Garrick Ollivander.
+                        </p>
+                    </div>
+                    <div class="item_carousel">
+                        <h3 class="title_carousel">
+                            PATRONUS
+                        </h3>
+                        <p class="text_carousel">
+                            My patronus is a shining silver otter. The first time I saw it, it was gambolling around me.
+                            'They are sort of nice, aren't they?'
+                        </p>
+                    </div>
+                    <div class="item_carousel">
+                        <h3 class="title_carousel">
+                            PET
+                        </h3>
+                        <p class="text_carousel">
+                            Crookshanks is my pet cat. He has the ability to solve problems on his own without aid or
+                            teaching, and clear dislike of and ability at recognising untrustworthy persons.
+                        </p>
+                    </div>
+                </div>
+                <div id="arrows_aboutMe">
                     <div class="arrow_carousel" id="L"></div>
                     <div class="arrow_carousel" id="R"></div>
                 </div>
+            </div>
+
         </section>
 
         <div class="vertical-line">
@@ -96,7 +111,7 @@
                 <span class="dot2"></span>
             </div>
         </div>
-        <section class="skills">
+        <section class="skills" id="skills">
             <!-- Alexandre -->
             <section class="skill">
                 <img src="./img/potion.png" alt="POTION">
@@ -124,8 +139,9 @@
             <img src="img/drop.png">
             <img src="img/drop.png">
         </div>
-        <section class="pensine">
+        <section class="pensine" id="pensine">
             <div class="grid">
+
                 <div>
                     <p>Co-founder of the Dumbledore's Army</p>
                     <hr />
@@ -148,7 +164,7 @@
             <div class="blur"></div>
             <!-- Thomas -->
         </section>
-        <section class="contact">
+        <section class="contact" id="contact">
             <!-- Léa -->
             <div class="index3">
                 <div class="directional-arrows-container">
