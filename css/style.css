@@ -85,6 +85,49 @@ main {
     width: 65%;
 }
 
+/* SIDE NAV BAR START */
+
+.side_scroll{
+    position: fixed;
+    right: 2%;
+    margin-top: 45vh;
+  }
+  .image_scroll{
+    height: 0;
+  }
+  .side_scroll .image_scroll img{
+    display: flex;
+    margin-top: 1.75rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    opacity: 0.8;
+  }
+  .ligne_scroll{
+    margin-top: -3.5vh;
+    height: 9rem;
+  }
+
+
+
+.ligne_opacity_enabled{
+    opacity: 1;
+}
+.ligne_opacity_disabled{
+    opacity: 0.5;
+}
+
+#ligne1, #ligne2, #ligne3{
+    margin-left: 3rem;
+    margin-top: 1.25rem;
+    width: 3px;
+    height: 2.25rem;
+    border-width:0;
+    color:#000;
+    background-color:#000;
+}
+
+
+
 /* 🌸 ABOUT ME SECTION NAO 🌸 */
 .about_me {
     height: 30rem;

@@ -68,6 +68,7 @@ document.body.onload=function(){
         else    
             point5.classList.remove("point_current")
 }
+
 }
 
 
@@ -104,4 +105,5 @@ navUl.addEventListener("click", () => {
 });
 
 // MENU BURGER END
+
 
