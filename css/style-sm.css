@@ -29,7 +29,7 @@ html {
 }
 body {
   position: relative
-} */
+} 
 
 /* PORTRAIT */
 
@@ -305,16 +305,17 @@ nav img{
   opacity: 1;
 }
 
-.arrow_carousel.disabled, .arrow_carousel.disabled:hover{
-    cursor: default;
-    opacity: 0.5;
-    transform: scale(1);
+.arrow_carousel.disabled,
+.arrow_carousel.disabled:hover {
+  cursor: default;
+  opacity: 0.5;
+  transform: scale(1);
 }
 
 
 #L {
-    height: 0;
-    width: 0;
+  height: 0;
+  width: 0;
 
 
   transition: all 0.3s ease;
@@ -333,12 +334,7 @@ nav img{
   border-bottom: solid transparent 0.45rem;
   border-left: solid var(--font-color01) 0.7rem;
   transition: all 0.3s ease;
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 }
-
 
 /*PENSINE*/
 

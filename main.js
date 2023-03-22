@@ -12,30 +12,34 @@ document.body.onload=function(){
     point4=document.getElementById("p4");
     point5=document.getElementById("p5");
     afficherMasquer();
-  };
-  
-  arrowL.onclick = function () {
-    if (position < 0) position++;
-    carouselBox.style.transform =
-      "translate(" + position * boxOverflow.clientWidth + "px)";
-    afficherMasquer();
-  };
 
-  addEventListener("resize", () => {
-    carouselBox.style.transition = "none";
-    carouselBox.style.transform =
-      "translate(" + position * boxOverflow.clientWidth + "px)";
-    carouselBox.style.transition = "all 0.5s ease";
-  });
+    arrowR.onclick = function () {
+        if (position > -nbItems + 1)
+            position--;
+        carouselBox.style.transform = "translate(" + position * boxOverflow.clientWidth + "px)";
+        afficherMasquer();
+    }
 
-  function afficherMasquer() {
-    if (position == -nbItems + 1) arrowR.classList.add("disabled");
-    else arrowR.classList.remove("disabled");
 
-    if (position == 0) arrowL.classList.add("disabled");
-    else arrowL.classList.remove("disabled");
-  }
-};
+    arrowL.onclick = function () {
+        if (position < 0)
+            position++;
+        carouselBox.style.transform = "translate(" + position * boxOverflow.clientWidth + "px)";
+        afficherMasquer();
+    }
+
+
+    addEventListener("resize", () => {
+        carouselBox.style.transition = "none";
+        carouselBox.style.transform = "translate(" + position * boxOverflow.clientWidth + "px)";
+        carouselBox.style.transition = "all 0.5s ease";
+    });
+
+
+
+    function afficherMasquer() {
+        if (position == -nbItems + 1)
+            arrowR.classList.add("disabled")
 
         else
             arrowR.classList.remove("disabled")
@@ -65,7 +69,6 @@ document.body.onload=function(){
             point5.classList.remove("point_current")
 }
 }
-
 // Fermer le menu burger lors du click sur un titres
 
 const navUl = document.getElementById("navTitle");
