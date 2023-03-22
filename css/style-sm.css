@@ -21,10 +21,10 @@
   --text-size-p: 15px;
   --title-padding: 10%;
 }
+
 html {
   scroll-behavior: smooth;
 }
-html, body {
   overflow-x: hidden;
 }
 body {
@@ -42,6 +42,7 @@ nav img{
   width: 2rem;
   filter: invert(1);
 }
+
 .nav_links {
   position: absolute;
   top: 0;
@@ -55,15 +56,18 @@ nav img{
   align-items: center;
   text-align: center;
   margin-left: +100%;
-  transition:all 0.5s ease;
+  transition: all 0.5s ease;
 }
+
 .nav_links ul {
   display: flex;
   flex-direction: column;
 }
+
 .nav_links ul li {
   margin: 0.75rem 0;
 }
+
 .navbar a {
   border-bottom: 1px solid black;
   padding-bottom: 1.5vh;
@@ -71,6 +75,7 @@ nav img{
   font-size: var(--text-size-h2);
   color: var(--font-color01);
 }
+
 .menu_burger {
   position: absolute;
   margin-top: 3vh;
@@ -81,6 +86,7 @@ nav img{
   background: rgba(227, 210, 210, 0.5);
   filter: blur(5px);
 }
+
 /* TRANSITIONS */
 
 /* changements sur le bouton du menu */
@@ -92,17 +98,19 @@ nav img{
   filter: invert(0);
 }
 /* apparition du menu */
-.nav_links.mobile_menu{
+
+.nav_links.mobile_menu {
   margin-left: 0;
 }
-.portrait_text.no_text{
+
+.portrait_text.no_text {
   opacity: 0;
   transition: all 0.5s ease;
 }
-.portrait_text{
-  opacity: 1;
+.portrait_text {
   transition: all 0.5s ease;
 }
+
 /* MENU BURGER END */
 
 .portrait {
@@ -115,6 +123,7 @@ nav img{
   border-radius: 0 0 2rem 2rem;
   box-shadow: 0 1rem 5rem 0 rgba(0, 0, 0, 0.5);
 }
+
 .portrait h1 {
   border-top: 1px solid white;
   width: 13rem;
@@ -128,11 +137,13 @@ nav img{
   margin-top: 60vh;
   line-height: 70%;
 }
+
 .portrait h1 span {
   padding-left: 2rem;
   color: var(--font-color02);
   opacity: 0.8;
 }
+
 .portrait img {
   position: absolute;
   margin-top: 94vh;
@@ -147,6 +158,7 @@ nav img{
   right: 6%;
   margin-top: 76vh;
 }
+
 .citation p {
   font-family: var(--text-font);
   font-style: italic;
@@ -162,13 +174,13 @@ nav img{
 }
 
 .citation p {
-    font-family: var(--text-font);
-    font-style: italic;
-    font-size: 1.25rem;
-    color: var(--font-color02);
-    text-align: right;
-    width: 11rem;
-    padding-bottom: 0.75rem;
+  font-family: var(--text-font);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--font-color02);
+  text-align: right;
+  width: 11rem;
+  padding-bottom: 0.75rem;
 }
 
 /* SKILLS */
@@ -275,37 +287,40 @@ nav img{
   opacity: 0.5;
 }
 
-#arrows_aboutMe{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    position: relative;
-    top: calc(-100% + 60px);
-    padding-left: 20px;
-    padding-right: 20px;
+#arrows_aboutMe {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  top: calc(-100% + 60px);
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-.arrow_carousel:hover{
-    cursor: pointer;
-    transform: scale(1.2);
-    opacity: 1;
+.arrow_carousel:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  opacity: 1;
 }
 
-.arrow_carousel.disabled, .arrow_carousel.disabled:hover{
-    cursor: default;
-    opacity: 0.5;
-    transform: scale(1);
+.arrow_carousel.disabled,
+.arrow_carousel.disabled:hover {
+  cursor: default;
+  opacity: 0.5;
+  transform: scale(1);
 }
-.arrow_carousel{
-    cursor: pointer;
+
+.arrow_carousel {
+  cursor: pointer;
 }
-.arrow_carousel{
-    cursor: pointer;
+
+.arrow_carousel {
+  cursor: pointer;
 }
 
 #L {
-    height: 0;
-    width: 0;
+  height: 0;
+  width: 0;
 
 
   transition: all 0.3s ease;
@@ -342,14 +357,14 @@ nav img{
 }
 
 #R {
-    height: 0;
-    width: 0;
-    
-    border-top: solid transparent 0.45rem;
-    border-bottom: solid transparent 0.45rem;
-    border-left: solid var(--font-color01) 0.7rem;
-    transition:all 0.3s ease;
-   
+  height: 0;
+  width: 0;
+
+  border-top: solid transparent 0.45rem;
+  border-bottom: solid transparent 0.45rem;
+  border-left: solid var(--font-color01) 0.7rem;
+  transition: all 0.3s ease;
+
 }
 
 
@@ -357,12 +372,12 @@ nav img{
 
 /* VERTICAL LINE START */
 .vertical-line {
-    position: absolute;
-    height: 59.5rem;
-    opacity: 0.9;
-    border-left: 0.2rem solid rgb(0, 0, 0);
-    left: 50%;
-    margin-left: -2px;
+  position: absolute;
+  height: 59.5rem;
+  opacity: 0.9;
+  border-left: 0.2rem solid rgb(0, 0, 0);
+  left: 50%;
+  margin-left: -2px;
 }
 
 .arrow-top {
@@ -373,10 +388,10 @@ nav img{
 }
 
 .arrow-top {
-    margin-left: -0.35rem;
-    border-top: 0.5rem solid rgb(0, 0, 0);
-    border-right: 0.25rem solid transparent;
-    border-left: 0.25rem solid transparent;
+  margin-left: -0.35rem;
+  border-top: 0.5rem solid rgb(0, 0, 0);
+  border-right: 0.25rem solid transparent;
+  border-left: 0.25rem solid transparent;
 }
 
 .drop {
@@ -395,6 +410,7 @@ nav img{
   width: 2rem;
   height: 2rem;
 }
+
 .dot,
 .dot2 {
   position: absolute;
@@ -403,31 +419,32 @@ nav img{
   background-color: #000000;
   border-radius: 50%;
 }
+
 .dot {
   transform: translateX(-50%);
   bottom: 0;
-    opacity: 0.9;
-    width: 2rem;
-    height: 2rem;
+  opacity: 0.9;
+  width: 2rem;
+  height: 2rem;
 }
 
 .dot,
 .dot2 {
-    position: absolute;
-    height: 0.75rem;
-    width: 0.75rem;
-    background-color: #000000;
-    border-radius: 50%;
+  position: absolute;
+  height: 0.75rem;
+  width: 0.75rem;
+  background-color: #000000;
+  border-radius: 50%;
 }
 
 .dot {
-    transform: translateX(-50%);
-    bottom: 0;
+  transform: translateX(-50%);
+  bottom: 0;
 }
 
 .dot2 {
-    transform: translateX(-50%);
-    margin-top: 30rem;
+  transform: translateX(-50%);
+  margin-top: 30rem;
 }
 
 /* VERTICAL LINE END */
@@ -506,11 +523,9 @@ nav img{
   z-index: 0;
   width: 100%;
   height: 48rem;
-  background: linear-gradient(
-    180deg,
-    #2b2f53 6.15%,
-    rgba(165, 164, 181, 0.5) 100%
-  );
+  background: linear-gradient(180deg,
+      #2b2f53 6.15%,
+      rgba(165, 164, 181, 0.5) 100%);
   background-size: cover;
   background-position: center;
 }
@@ -553,15 +568,15 @@ nav img{
 .contact form input,
 textarea,
 button {
-    width: 16rem;
-    background-color: rgba(228, 228, 228, 0.2);
-    border: 2px solid rgba(233, 233, 233, 0.7);
-    border-radius: 0.5rem;
-    letter-spacing: 0.1em;
-    font-family: var(--text-font);
-    font-size: var(--text-size-p);
-    color: var(--primary-color);
-    text-align: center;
+  width: 16rem;
+  background-color: rgba(228, 228, 228, 0.2);
+  border: 2px solid rgba(233, 233, 233, 0.7);
+  border-radius: 0.5rem;
+  letter-spacing: 0.1em;
+  font-family: var(--text-font);
+  font-size: var(--text-size-p);
+  color: var(--primary-color);
+  text-align: center;
 }
 
 
@@ -590,23 +605,23 @@ input:-webkit-autofill:focus {
   font-size: var(--text-size-p);
   color: var(--primary-color);
   opacity: 0.5;
-    height: 2.5rem;
-    margin: 0.3rem 0 1.25rem 0;
+  height: 2.5rem;
+  margin: 0.3rem 0 1.25rem 0;
 
 }
 
 .contact form textarea {
-    margin: 0.3rem 0 1.25rem 0;
-    border-radius: 0.5rem;
-    padding: 0.5rem;
-    resize: none;
+  margin: 0.3rem 0 1.25rem 0;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  resize: none;
 }
 
 .contact form ::placeholder {
-    font-size: var(--text-size-p);
-    color: var(--primary-color);
-    opacity: 0.5;
-    align-items: center;
+  font-size: var(--text-size-p);
+  color: var(--primary-color);
+  opacity: 0.5;
+  align-items: center;
 }
 
 .contact form button {

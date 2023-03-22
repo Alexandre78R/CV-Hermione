@@ -80,20 +80,20 @@ display: none;
 
 main {
     display: table;
-    position: relative; 
-    left : 35%;
+    position: relative;
+    left: 35%;
     width: 65%;
 }
 
 /* 🌸 ABOUT ME SECTION NAO 🌸 */
-.about_me {                 
+.about_me {
     height: 30rem;
     color: var(--font-color01);
     display: flex;
     flex-direction: column;
 }
 
-#title_aboutme{
+#title_aboutme {
     margin-top: 3.31rem;
     letter-spacing: 0.15em;
     font-family: var(--title-font);
@@ -103,14 +103,14 @@ main {
     margin-bottom: 3.81rem;
 }
 
-#box_overflow{
-    width : 60%;
+#box_overflow {
+    width: 60%;
     margin-left: 20%;
     margin-right: 20%;
     overflow: hidden;
 }
 
-#carousel_box{
+#carousel_box {
     height: 10.668rem;
     position: relative;
     display: flex;
@@ -118,19 +118,19 @@ main {
     transition: all 0.5s ease;
 }
 
-.item_carousel{
+.item_carousel {
     display: flex;
     align-items: center;
     flex-direction: column;
     flex: 1 0 100%;
 }
 
-.title_carousel{
+.title_carousel {
     font-family: var(--title-font);
     font-size: var(--text-size-h3);
 }
 
-.text_carousel{
+.text_carousel {
     font-family: var(--text-font);
     display: flex;
     max-width: 30.5rem;
@@ -139,7 +139,7 @@ main {
     font-size: var(--text-size-p)
 }
 
-#arrows_aboutMe{
+#arrows_aboutMe {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -149,21 +149,24 @@ main {
     padding-right: 2px;
 }
 
-.arrow_carousel:hover{
+.arrow_carousel:hover {
     cursor: pointer;
     transform: scale(1.2);
     opacity: 1;
 }
 
-.arrow_carousel.disabled, .arrow_carousel.disabled:hover{
+.arrow_carousel.disabled,
+.arrow_carousel.disabled:hover {
     cursor: default;
     opacity: 0.5;
     transform: scale(1);
 }
-.arrow_carousel{
+
+.arrow_carousel {
     cursor: pointer;
 }
-.arrow_carousel{
+
+.arrow_carousel {
     cursor: pointer;
 }
 
@@ -172,7 +175,7 @@ main {
     height: 0;
     width: 0;
 
-    transition:all 0.3s ease;
+    transition: all 0.3s ease;
 
     border-top: solid transparent 0.5rem;
     border-bottom: solid transparent 0.5rem;
@@ -183,12 +186,12 @@ main {
 #R {
     height: 0;
     width: 0;
-    
+
     border-top: solid transparent 0.5rem;
     border-bottom: solid transparent 0.5rem;
     border-left: solid var(--font-color01) 1rem;
-    transition:all 0.3s ease;
-   
+    transition: all 0.3s ease;
+
 }
 
 
@@ -245,8 +248,9 @@ main {
     border-left: 0.2rem solid rgb(0, 0, 0);
     left: 50%;
     margin-left: -2px;
-  }
-  .arrow-top{
+}
+
+.arrow-top {
     margin-left: -0.6rem;
     border-top: 1rem solid rgb(0, 0, 0);
     border-right: 0.5rem solid transparent;
@@ -268,22 +272,28 @@ main {
       height: 2rem;
   } 
   .dot, .dot2 {
+
     position: absolute;
     height: 0.75rem;
     width: 0.75rem;
     background-color: #000000;
     border-radius: 50%;
-  }
-  .dot {
+}
+
+.dot {
     transform: translateX(-50%);
     bottom: 0;
-  }
-  .dot2 {
+}
+
+.dot2 {
     transform: translateX(-50%);
+
     margin-top: 45rem;
   }
 
-  /* VERTICAL LINE END */
+
+/* VERTICAL LINE END */
+
 
   .pensine{
     margin-top: 10rem;
@@ -318,6 +328,7 @@ main {
       font-size: 20px;
       color: rgb(46, 46, 46);
   }
+
 
 /*CONTACT*/
 .contact {
@@ -362,6 +373,10 @@ button {
     font-size: var(--text-size-p);
     color: #B7B7B7;
     text-align: center;
+}
+
+button:hoover {
+    background-color: red;
 }
 
 .contact form label {

@@ -12,9 +12,10 @@ document.body.onload = function () {
     if (position > -nbItems + 1) position--;
     carouselBox.style.transform =
       "translate(" + position * boxOverflow.clientWidth + "px)";
+
     afficherMasquer();
   };
-
+  
   arrowL.onclick = function () {
     if (position < 0) position++;
     carouselBox.style.transform =
@@ -37,6 +38,7 @@ document.body.onload = function () {
     else arrowL.classList.remove("disabled");
   }
 };
+
 
 // MENU BURGER START
 const menuHamburger = document.querySelector(".menu_burger");
