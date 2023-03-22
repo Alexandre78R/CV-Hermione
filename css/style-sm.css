@@ -33,6 +33,10 @@ body {
 
 /* PORTRAIT */
 
+.side_scroll{
+  display: none;
+}
+
 /* MENU BURGER START */
 
 nav img{
