@@ -10,27 +10,24 @@
     --font-color01: #090320;
     --font-color02: #F8F8F8;
     --title-font: 'Lateef', serif;
-
-    /* updated by Léa : */
+    --title-size:80px;
     --text-size-h2: 80px;
     --text-size-h3: 40px;
-
     --letter-spacing-h2: 0.15em;
     --font-weight-h2: 400;
     --text-font: 'KoHo', sans-serif;
-    /* updated by Léa : */
     --text-size-p: 23px;
     --title-padding: 15%;
 }
 
 /* PORTRAIT */
 
-.portrait {
+nav {
+    display:none;
+}
+.portrait  {
     width: 35%;
-    /* height: 100%; */
     position: fixed;
-    /* display: flex; */
-
     top: 0;
     left: 0;
     height: 100%;
@@ -39,81 +36,46 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    /* border-radius: 0 0 2rem 2rem;
-    box-shadow: 0 2rem 5rem 0 rgba(0,0,0,0.5); */
 }
-
-
-.portrait h1 hr {
-    margin-bottom: 0.5rem;
-    border-bottom: 1px solid rgb(255, 255, 255);
-    width: 14rem;
-}
-
-.arrow-right {
-    position: absolute;
-    margin-top: 22.35rem;
-    left: 3%;
-    border-top: 0.2rem solid transparent;
-    border-bottom: 0.2rem solid transparent;
-    border-left: 0.5rem solid rgb(255, 255, 255);
-}
-
-.arrow-left {
-    position: absolute;
-    margin-top: 34.37rem;
-    right: 4%;
-    border-top: 0.2rem solid transparent;
-    border-bottom: 0.2rem solid transparent;
-    border-right: 0.5rem solid rgb(255, 255, 255);
-}
-
 .portrait h1 {
+    border-top: 2px solid white;
+    width: 19rem;
+    padding-top: 0.5rem;
     position: absolute;
     font-family: var(--title-font);
     font-size: var(--title-size);
     font-weight: var(--font-weight-h2);
     color: var(--font-color02);
     left: 5%;
-    margin-top: 22.5rem;
+    margin-top: 58vh;
     line-height: 70%;
+  }
+.portrait h1 span{
+  padding-left: 5rem;
+  color: var(--font-color02);
+  opacity: 0.8;
 }
-
-.portrait h1 span {
-    padding-left: 2rem;
-    color: var(--font-color02);
-    opacity: 0.8;
+.portrait img{
+display: none;
 }
-
-.portrait img {
-    position: absolute;
-    margin-top: 36.5rem;
-    left: 50%;
-    width: 1.5rem;
-    opacity: 0.8;
-    filter: invert(100%);
-}
-
 .citation {
-    position: absolute;
-    right: 6%;
-    margin-top: 29rem;
+  position: absolute;
+  right:6%;
+  margin-top: 79vh;
 }
-
 .citation p {
     font-family: var(--text-font);
     font-style: italic;
-    font-size: 1.25rem;
+    font-size: 1.75rem;
     color: var(--font-color02);
     text-align: right;
-    width: 11rem;
-    padding-bottom: 0.75rem;
-}
-
-.citation hr {
-    border-bottom: 1px solid rgb(255, 255, 255);
-    width: 11rem;
-}
+    opacity: 0.8;
+    width: 15rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid white;
+    position: absolute;
+    right: 6%;
+  }
 
 
 main {
@@ -142,10 +104,8 @@ main {
 }
 
 #box_overflow {
-    width: 60%;
-    margin-left: 20%;
-    margin-right: 20%;
     overflow: hidden;
+    width: 35rem;
 }
 
 #carousel_box {
@@ -177,15 +137,40 @@ main {
     font-size: var(--text-size-p)
 }
 
-#arrows_aboutMe{
+#point_box{
+    margin-top: 1rem;
+    margin-left: 45%;
+    margin-right: 45%;
+    width: 10%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    position: relative;
-    top: calc(-100% + 90px);
-    padding-left: 2px;
-    padding-right: 2px;
+    
+    
 }
+
+.point_about_me{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: black;
+    border-radius: 50%;
+    width: 0.4rem;
+    height: 0.4rem;
+    opacity: 0.5;
+}
+
+.point_current{
+    opacity: 1;
+    transition-delay: 50ms;
+}
+
+#fleches_box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
 
 .arrow_carousel:hover {
     cursor: pointer;
@@ -198,14 +183,6 @@ main {
     cursor: default;
     opacity: 0.5;
     transform: scale(1);
-}
-
-.arrow_carousel {
-    cursor: pointer;
-}
-
-.arrow_carousel {
-    cursor: pointer;
 }
 
 
@@ -293,27 +270,24 @@ main {
     border-top: 1rem solid rgb(0, 0, 0);
     border-right: 0.5rem solid transparent;
     border-left: 0.5rem solid transparent;
-}
+  }
+  .drop {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 28rem;
+      margin-top: 14rem;
+      padding-top: 3rem;
+  }
+  .drop img {
+      width: 2rem;
+      height: 2rem;
+  } 
+  .dot, .dot2 {
 
-.drop {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 28rem;
-    margin-top: 9rem;
-    padding-top: 3rem;
-}
-
-.drop img {
-    width: 2rem;
-    height: 2rem;
-}
-
-.dot,
-.dot2 {
     position: absolute;
     height: 0.75rem;
     width: 0.75rem;
@@ -328,44 +302,48 @@ main {
 
 .dot2 {
     transform: translateX(-50%);
-    margin-top: 43rem;
-}
+
+    margin-top: 45rem;
+  }
+
 
 /* VERTICAL LINE END */
 
-.pensine {
-    margin-top: 6rem;
-}
 
-.grid {
-    width: 100%;
-    display: grid;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-    padding-top: 6rem;
-    grid-template-columns: repeat(2, 15rem);
-    grid-template-rows: repeat(3, 2.5rem);
-    gap: 9rem 7rem;
-}
+  .pensine{
+    margin-top: 10rem;
+  }
 
-.grid p {
-    font-family: var(--text-font);
-    font-size: var(--text-size-p);
-    color: var(--font-color01);
-}
+  .grid {
+      width: 100%;
+      display: grid;
+      justify-content: space-evenly;
+      align-items: center;
+      text-align: center;
+      padding-top: 6rem;
+      grid-template-columns: repeat(2, 16rem);
+      grid-template-rows: repeat(3, 2.5rem);
+      gap: 9rem 7rem;
+  }
+  
+  .grid p {
+      font-family: var(--text-font);
+      font-size: 28px;
+      color: var(--font-color01);
+  }
+  
+  .grid hr {
+      border-top: 2px solid rgb(24, 24, 24);
+      width: 10rem;
+      margin: 0.5rem 2.5rem;
+  }
+  
+  .grid span {
+      font-family: var(--text-font);
+      font-size: 20px;
+      color: rgb(46, 46, 46);
+  }
 
-.grid hr {
-    border-top: 2px solid rgb(24, 24, 24);
-    width: 10rem;
-    margin: 0.5rem 2.5rem;
-}
-
-.grid span {
-    font-family: var(--text-font);
-    font-size: 15px;
-    color: rgb(46, 46, 46);
-}
 
 /*CONTACT*/
 .contact {
