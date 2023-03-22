@@ -23,21 +23,19 @@
 }
 
 html {
-  scroll-behavior: auto;
+  scroll-behavior: smooth;
 }
-
-/* html, body {
   overflow-x: hidden;
 }
 body {
   position: relative
-} */
+}
 
 /* PORTRAIT */
 
 /* MENU BURGER START */
 
-nav img {
+nav img{
   position: absolute;
   top: 3.25vh;
   right: 6.75vw;
@@ -90,6 +88,17 @@ nav img {
 }
 
 /* TRANSITIONS */
+
+/* changements sur le bouton du menu */
+.menu_burger.disable{
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+.menu.toBlack{
+  filter: invert(0);
+}
+/* apparition du menu */
+
 .nav_links.mobile_menu {
   margin-left: 0;
 }
@@ -98,7 +107,6 @@ nav img {
   opacity: 0;
   transition: all 0.5s ease;
 }
-
 .portrait_text {
   transition: all 0.5s ease;
 }
@@ -113,26 +121,9 @@ nav img {
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 0 0 2rem 2rem;
-  box-shadow: 0 2rem 5rem 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1rem 5rem 0 rgba(0, 0, 0, 0.5);
 }
 
-/* .arrow-right {
-  position: absolute;
-  margin-top: 21.84rem;
-  left: 3%;
-  border-top: 0.2rem solid transparent;
-  border-bottom: 0.2rem solid transparent;
-  border-left: 0.5rem solid rgb(255, 255, 255);
->>>>>>> 6374dc6dcb7c856c3791ba241c38676a08c42fa8
-}
-.arrow-left {
-  position: absolute;
-  margin-top: 32.2rem;
-  right: 4%;
-  border-top: 0.2rem solid transparent;
-  border-bottom: 0.2rem solid transparent;
-  border-right: 0.5rem solid rgb(255, 255, 255);
-} */
 .portrait h1 {
   border-top: 1px solid white;
   width: 13rem;
@@ -143,7 +134,7 @@ nav img {
   font-weight: var(--font-weight-h2);
   color: var(--font-color02);
   left: 5%;
-  margin-top: 62vh;
+  margin-top: 60vh;
   line-height: 70%;
 }
 
@@ -165,7 +156,7 @@ nav img {
 .citation {
   position: absolute;
   right: 6%;
-  margin-top: 77vh;
+  margin-top: 76vh;
 }
 
 .citation p {
@@ -180,7 +171,6 @@ nav img {
   border-bottom: 1px solid white;
   position: absolute;
   right: 6%;
-  /* margin-top: 29rem; */
 }
 
 .citation p {
