@@ -23,6 +23,122 @@
     --title-padding: 15%;
 }
 
+/* PORTRAIT */
+
+.portrait  {
+    width: 35%;
+    /* height: 100%; */
+    position: fixed;
+    /* display: flex; */
+
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #fff;
+    background-image: url("/img/Hermione.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* border-radius: 0 0 2rem 2rem;
+    box-shadow: 0 2rem 5rem 0 rgba(0,0,0,0.5); */
+}
+
+body {
+    /* display : flex; */
+    /* display: grid;
+    grid-template-columns: 1fr 2fr;  */
+    /* grid-template-rows: ; */
+    /* grid-column-gap: 0px;
+    grid-row-gap: 0px; */
+}
+
+.portrait h1 hr{
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    width: 14rem;
+}
+
+.arrow-right{
+    position: absolute;
+    margin-top: 22.35rem;
+    left: 3%;
+    border-top : 0.2rem solid transparent;
+    border-bottom : 0.2rem solid transparent;
+    border-left : 0.5rem solid rgb(255, 255, 255);
+}
+.arrow-left{
+    position: absolute;
+    margin-top: 34.37rem;
+    right: 4%;
+    border-top : 0.2rem solid transparent;
+    border-bottom : 0.2rem solid transparent;
+    border-right : 0.5rem solid rgb(255, 255, 255);
+}
+.portrait h1{
+  position: absolute;
+  font-family: var(--title-font);
+  font-size: var(--title-size);
+  font-weight: var(--font-weight-h2);
+  color: var(--font-color02);
+  left: 5%;
+  margin-top: 22.5rem;
+  line-height: 70%;
+}
+.portrait h1 span{
+  padding-left: 2rem;
+  color: var(--font-color02);
+  opacity: 0.8;
+}
+.portrait img{
+    position: absolute;
+    margin-top: 36.5rem;
+    left: 50%;
+    width: 1.5rem;
+    opacity: 0.8;
+    filter: invert(100%);
+}
+.citation {
+  position: absolute;
+  right:6%;
+  margin-top: 29rem;
+}
+.citation p{
+  font-family: var(--text-font);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--font-color02);
+  text-align: right;
+  width: 11rem;
+  padding-bottom: 0.75rem;
+}
+.citation hr{
+  border-bottom: 1px solid rgb(255, 255, 255);
+  width: 11rem;
+}
+
+/* .div1 { grid-area: 1 / 2 / 2 / 3; }
+.div2 { grid-area: 1 / 1 / 2 / 2; } */
+main {
+    background-color: red;
+    display: table;
+    position: relative; 
+    left : 35%;
+    width: 65%;
+    /* width: 100%; */
+    /* right: -40%; */
+    /* grid-area: 1 / 1 / 2 / 2; */
+    /* grid-area: 1 / 2 / 2 / 3; */
+    /* border :  0%; */
+}
+
+header {
+    /* grid-area: 1 / 1 / 2 / 2; */
+    /* grid-area: 1 / 2 / 2 / 3; */
+}
+
+/* 🌸 ABOUT ME SECTION NAO 🌸 */
+
+
 /* Skills */
 .skills {
     /* background-color: var(--primary-color); */
@@ -57,13 +173,100 @@
 
 .skill h3 {
     font-family: var(--title-font);
-    font-weight: 400;
+    font-weight: 500;
     font-size: 40px;
     line-height: 58px;
 }
 
+
+/*PENSINE*/
+
+/* VERTICAL LINE START */
+.vertical-line {
+    position: absolute;
+    height: 90rem;
+    opacity: 0.9;
+    border-left: 0.2rem solid rgb(0, 0, 0);
+    left: 50%;
+    margin-left: -2px;
+  }
+  .arrow-top{
+    margin-left: -0.6rem;
+    border-top: 1rem solid rgb(0, 0, 0);
+    border-right: 0.5rem solid transparent;
+    border-left: 0.5rem solid transparent;
+  }
+  .drop {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 28rem;
+      margin-top: 9rem;
+      padding-top: 3rem;
+  }
+  .drop img {
+      opacity: 0.9;
+      width: 2rem;
+      height: 2rem;
+  } 
+  .dot, .dot2 {
+    position: absolute;
+    height: 0.75rem;
+    width: 0.75rem;
+    background-color: #000000;
+    border-radius: 50%;
+  }
+  .dot {
+    transform: translateX(-50%);
+    bottom: 0;
+  }
+  .dot2 {
+    transform: translateX(-50%);
+    margin-top: 43rem;
+  }
+
+  /* VERTICAL LINE END */
+
+  .pensine{
+    margin-top: 6rem;
+  }
+
+  .grid {
+      width: 100%;
+      display: grid;
+      justify-content: space-evenly;
+      align-items: center;
+      text-align: center;
+      padding-top: 6rem;
+      grid-template-columns: repeat(2, 15rem);
+      grid-template-rows: repeat(3, 2.5rem);
+      gap: 9rem 7rem;
+  }
+  
+  .grid p {
+      font-family: var(--text-font);
+      font-size: var(--text-size-p);
+      color: var(--font-color01);
+  }
+  
+  .grid hr {
+      border-top: 2px solid rgb(24, 24, 24);
+      width: 10rem;
+      margin: 0.5rem 2.5rem;
+  }
+  
+  .grid span {
+      font-family: var(--text-font);
+      font-size: 15px;
+      color: rgb(46, 46, 46);
+  }
+
 /*CONTACT*/
 .contact {
+    margin-top: 14rem;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -81,7 +284,7 @@
     display: flex;
     justify-content: center;
     padding-top: 4rem;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
 }
 
 /* FORM */
