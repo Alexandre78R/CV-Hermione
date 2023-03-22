@@ -72,7 +72,6 @@
 .vertical-line {
     position: absolute;
     height: 90rem;
-    opacity: 0.9;
     border-left: 0.2rem solid rgb(0, 0, 0);
     left: 50%;
     margin-left: -2px;
@@ -95,7 +94,6 @@
       padding-top: 3rem;
   }
   .drop img {
-      opacity: 0.9;
       width: 2rem;
       height: 2rem;
   } 

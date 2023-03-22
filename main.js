@@ -37,4 +37,35 @@ function afficherMasquer(){
 }
 }
 
+// MENU BURGER START 
+const menuHamburger = document.querySelector(".menu_burger")
+const navLinks = document.querySelector(".nav_links")
+const portraitText = document.querySelector(".portrait_text")
 
+
+menuHamburger.addEventListener('click',()=>{
+navLinks.classList.toggle('mobile_menu');
+portraitText.classList.toggle('no_text');
+portraitText.addEventListener('transitionend',()=>{
+    portraitText.hidden = false;
+})
+})
+
+portraitText.addEventListener('transitionend',()=>{
+    portraitText.hidden = true;
+})
+
+
+// Fermer le menu burger lors du click  
+const navUl = document.getElementById("navTitle")
+const navNone = document.querySelector(".nav_links")
+
+navUl.addEventListener('click',()=>{
+    navNone.classList.remove('mobile_menu');    
+    portraitText.classList.toggle('no_text');
+    // portraitText.addEventListener('transitionend',()=>{
+    //     portraitText.hidden = false;
+    // })
+})
+
+// MENU BURGER END 
