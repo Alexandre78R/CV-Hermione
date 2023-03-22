@@ -24,12 +24,12 @@
 html {
   scroll-behavior: smooth;
 }
-html, body {
+ html, body {
   overflow-x: hidden;
 }
 body {
   position: relative
-}
+} 
 
 /* PORTRAIT */
 
@@ -232,12 +232,13 @@ nav img{
 }
 
 #box_overflow {
-  width: 100%;
   overflow: hidden;
+    height: 9rem;
+    width: 22rem;
 }
 
 #carousel_box {
-  height: 12.2rem;
+  height: auto;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -265,51 +266,60 @@ nav img{
   line-height: 21px;
 }
 
-.arrow_carousel {
-  position: absolute;
-  cursor: pointer;
+#point_box{
+  margin-top: 1rem;
+    margin-left: 43.5%;
+    margin-right: 43.5%;
+    width: 13%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  
+  
 }
+
+.point_about_me{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: black;
+  border-radius: 50%;
+  width: 0.3rem;
+  height: 0.3rem;
+  opacity: 0.5;
+}
+
+.point_current{
+  opacity: 1;
+  transition-delay: 50ms;
+}
+
+#fleches_box{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.arrow_carousel:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.arrow_carousel.disabled,
+.arrow_carousel.disabled:hover {
+  cursor: default;
+  opacity: 0.5;
+  transform: scale(1);
+}
+
 
 #L {
   height: 0;
   width: 0;
-  left: 5%;
-  right: 93%;
-  top: 103%;
-  opacity: 0.5;
-}
-
-#arrows_aboutMe{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    position: relative;
-    top: calc(-100% + 60px);
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.arrow_carousel:hover{
-    cursor: pointer;
-    transform: scale(1.2);
-    opacity: 1;
-}
-
-.arrow_carousel.disabled, .arrow_carousel.disabled:hover{
-    cursor: default;
-    opacity: 0.5;
-    transform: scale(1);
-}
-.arrow_carousel{
-    cursor: pointer;
-}
-.arrow_carousel{
-    cursor: pointer;
-}
-
-#L {
-    height: 0;
-    width: 0;
 
 
   transition: all 0.3s ease;
@@ -320,11 +330,6 @@ nav img{
 }
 
 
-#L:hover {
-  transform: scale(1.2);
-  opacity: 1;
-}
-
 #R {
   height: 0;
   width: 0;
@@ -333,29 +338,7 @@ nav img{
   border-bottom: solid transparent 0.45rem;
   border-left: solid var(--font-color01) 0.7rem;
   transition: all 0.3s ease;
-
-  left: 93%;
-  right: 7%;
-  top: 103%;
-  opacity: 0.5;
 }
-
-#R:hover {
-  transform: scale(1.2);
-  opacity: 1;
-}
-
-#R {
-    height: 0;
-    width: 0;
-    
-    border-top: solid transparent 0.45rem;
-    border-bottom: solid transparent 0.45rem;
-    border-left: solid var(--font-color01) 0.7rem;
-    transition:all 0.3s ease;
-   
-}
-
 
 /*PENSINE*/
 
@@ -435,6 +418,65 @@ nav img{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.animation-left {
+    position: relative;
+    animation-name: anim-left;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 0.1s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    transform: (-200px);
+}
+
+.animation-right {
+    position: relative;
+    animation-name: anim-right;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 0.1s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    transform: (-200px);
+}
+
+@keyframes anim-left {
+    from {
+        transform: translateX(-200px);
+        display: none;
+        position: absolute !important;
+        clip: rect(1px 1px 1px 1px);
+        clip: rect(1px, 1px, 1px, 1px);
+        height: 1px;
+        overflow: hidden;
+        width: 1px;
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes anim-right {
+    from {
+        transform: translateX(200px);
+        display: none;
+        overflow: hidden;
+        position: absolute !important;
+        clip: rect(1px 1px 1px 1px);
+        clip: rect(1px, 1px, 1px, 1px);
+        height: 1px;
+        overflow: hidden;
+        width: 1px;
+    }
+
+    to {
+        transform: translateX(0);
+    }
 }
 
 .grid {
