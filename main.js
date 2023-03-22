@@ -105,3 +105,30 @@ navUl.addEventListener("click", () => {
 
 // MENU BURGER END
 
+/* SIDE NAV BAR START */
+
+const ligne01 = document.getElementById("ligne1");
+const ligne02 = document.getElementById("ligne2");
+const ligne03 = document.getElementById("ligne3");
+
+window.addEventListener("scroll", event => {
+  let { pageYOffset } = window;
+  let scroll = this.scrollY;
+
+  if (pageYOffset <= 1200){
+  ligne01.style.opacity = 1;
+  ligne02.style.opacity = 0.5;
+  ligne03.style.opacity = 0.5;
+  }
+  else if (pageYOffset >= 1201 && pageYOffset <=  2055){
+  ligne01.style.opacity = 0.5;
+  ligne02.style.opacity = 1;
+  ligne03.style.opacity = 0.5;
+  }
+  else if (window.pageYOffset >= 2055){
+  ligne02.style.opacity = 0.5;
+  ligne03.style.opacity = 1;
+  }
+  });
+  
+/* SIDE NAV BAR END */

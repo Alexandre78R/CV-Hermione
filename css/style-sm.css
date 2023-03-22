@@ -355,13 +355,6 @@ nav img{
   border-left: 0.25rem solid transparent;
 }
 
-.arrow-top {
-    margin-left: -0.35rem;
-    border-top: 0.5rem solid rgb(0, 0, 0);
-    border-right: 0.25rem solid transparent;
-    border-left: 0.25rem solid transparent;
-}
-
 .drop {
   position: absolute;
   display: flex;
@@ -444,7 +437,7 @@ nav img{
 .grid hr {
   border-top: 2px solid rgb(255, 255, 255);
   width: 6rem;
-  margin: 0.25rem 1rem;
+  margin: 0.25rem 1.25rem;
 }
 
 .grid span {
