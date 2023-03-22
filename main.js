@@ -69,6 +69,27 @@ document.body.onload=function(){
             point5.classList.remove("point_current")
 }
 }
+
+
+// MENU BURGER START
+const menuHamburger = document.querySelector(".menu_burger");
+const navLinks = document.querySelector(".nav_links");
+const portraitText = document.querySelector(".portrait_text");
+const barreHorizontale = document.querySelector(".menu")
+
+menuHamburger.addEventListener("click", () => {
+  portraitText.style.display = "block";
+  navLinks.classList.toggle("mobile_menu");
+  portraitText.classList.toggle("no_text");
+  menuHamburger.classList.toggle("disable");
+  barreHorizontale.classList.toggle("toBlack");
+  portraitText.addEventListener("transitionend", () => {
+    if (portraitText.classList.contains("no_text")) {
+      portraitText.style.display = "none";
+    }
+  });
+});
+
 // Fermer le menu burger lors du click sur un titres
 
 const navUl = document.getElementById("navTitle");
@@ -83,3 +104,4 @@ navUl.addEventListener("click", () => {
 });
 
 // MENU BURGER END
+
