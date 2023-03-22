@@ -146,10 +146,8 @@ main {
 }
 
 #box_overflow {
-    width: 60%;
-    margin-left: 20%;
-    margin-right: 20%;
     overflow: hidden;
+    width: 35rem;
 }
 
 #carousel_box {
@@ -181,15 +179,40 @@ main {
     font-size: var(--text-size-p)
 }
 
-#arrows_aboutMe {
+#point_box{
+    margin-top: 1rem;
+    margin-left: 45%;
+    margin-right: 45%;
+    width: 10%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    position: relative;
-    top: calc(-100% + 90px);
-    padding-left: 2px;
-    padding-right: 2px;
+    
+    
 }
+
+.point_about_me{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: black;
+    border-radius: 50%;
+    width: 0.4rem;
+    height: 0.4rem;
+    opacity: 0.5;
+}
+
+.point_current{
+    opacity: 1;
+    transition-delay: 50ms;
+}
+
+#fleches_box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
 
 .arrow_carousel:hover {
     cursor: pointer;
@@ -202,14 +225,6 @@ main {
     cursor: default;
     opacity: 0.5;
     transform: scale(1);
-}
-
-.arrow_carousel {
-    cursor: pointer;
-}
-
-.arrow_carousel {
-    cursor: pointer;
 }
 
 
