@@ -20,6 +20,48 @@
     --title-padding: 15%;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
+  body::-webkit-scrollbar{
+    display: none;
+  }
+/* SIDE NAV BAR START */
+
+.side_scroll{
+    z-index: 1;
+    position: fixed;
+    right: 2%;
+    margin-top: 45vh;
+  }
+  .image_scroll{
+    height: 0;
+  }
+  .side_scroll .image_scroll img{
+    display: flex;
+    margin-top: 1.75rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    opacity: 0.8;
+  }
+  .ligne_scroll{
+    margin-top: -3.5vh;
+    height: 9rem;
+  }
+
+  .ligne_scroll hr{
+    opacity: 0.5;
+    margin-left: 3rem;
+    margin-top: 1.25rem;
+    width: 3px;
+    height: 2.25rem;
+    border-width:0;
+    color:#000;
+    background-color:#000;
+}
+  /* SIDE NAV BAR END */
+
 /* PORTRAIT */
 
 nav {
@@ -200,8 +242,8 @@ main {
 
 
 /* Skills */
+
 .skills {
-    /* background-color: var(--primary-color); */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
