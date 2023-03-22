@@ -112,6 +112,7 @@ const ligne02 = document.getElementById("ligne2");
 const ligne03 = document.getElementById("ligne3");
 
 window.addEventListener("scroll", event => {
+    console.log("event", event);
   let { pageYOffset } = window;
   let scroll = this.scrollY;
 
