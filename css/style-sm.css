@@ -23,7 +23,7 @@
 }
 
 html {
-  scroll-behavior: auto;
+  scroll-behavior: smooth;
 }
 
 html,
@@ -32,10 +32,14 @@ body {
 }
 
 body {
-  position: relative
+  position: relative;
 }
 
 /* PORTRAIT */
+
+.side_scroll {
+  display: none;
+}
 
 /* MENU BURGER START */
 
@@ -92,6 +96,18 @@ nav img {
 }
 
 /* TRANSITIONS */
+
+/* changements sur le bouton du menu */
+.menu_burger.disable {
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+.menu.toBlack {
+  filter: invert(0);
+}
+
+/* apparition du menu */
 .nav_links.mobile_menu {
   margin-left: 0;
 }
@@ -102,6 +118,7 @@ nav img {
 }
 
 .portrait_text {
+
   transition: all 0.5s ease;
 }
 
@@ -115,26 +132,9 @@ nav img {
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 0 0 2rem 2rem;
-  box-shadow: 0 2rem 5rem 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1rem 5rem 0 rgba(0, 0, 0, 0.5);
 }
 
-/* .arrow-right {
-  position: absolute;
-  margin-top: 21.84rem;
-  left: 3%;
-  border-top: 0.2rem solid transparent;
-  border-bottom: 0.2rem solid transparent;
-  border-left: 0.5rem solid rgb(255, 255, 255);
->>>>>>> 6374dc6dcb7c856c3791ba241c38676a08c42fa8
-}
-.arrow-left {
-  position: absolute;
-  margin-top: 32.2rem;
-  right: 4%;
-  border-top: 0.2rem solid transparent;
-  border-bottom: 0.2rem solid transparent;
-  border-right: 0.5rem solid rgb(255, 255, 255);
-} */
 .portrait h1 {
   border-top: 1px solid white;
   width: 13rem;
@@ -145,7 +145,7 @@ nav img {
   font-weight: var(--font-weight-h2);
   color: var(--font-color02);
   left: 5%;
-  margin-top: 62vh;
+  margin-top: 60vh;
   line-height: 70%;
 }
 
@@ -167,7 +167,7 @@ nav img {
 .citation {
   position: absolute;
   right: 6%;
-  margin-top: 77vh;
+  margin-top: 76vh;
 }
 
 .citation p {
@@ -182,7 +182,6 @@ nav img {
   border-bottom: 1px solid white;
   position: absolute;
   right: 6%;
-  /* margin-top: 29rem; */
 }
 
 .citation p {
@@ -252,12 +251,13 @@ nav img {
 }
 
 #box_overflow {
-  width: 100%;
   overflow: hidden;
+  height: 9rem;
+  width: 22rem;
 }
 
 #carousel_box {
-  height: 12.2rem;
+  height: auto;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -285,29 +285,42 @@ nav img {
   line-height: 21px;
 }
 
-.arrow_carousel {
-  position: absolute;
-  cursor: pointer;
-}
-
-#L {
-  height: 0;
-  width: 0;
-  left: 5%;
-  right: 93%;
-  top: 103%;
-  opacity: 0.5;
-}
-
-#arrows_aboutMe {
+#point_box {
+  margin-top: 1rem;
+  margin-left: 43.5%;
+  margin-right: 43.5%;
+  width: 13%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  position: relative;
-  top: calc(-100% + 60px);
-  padding-left: 20px;
-  padding-right: 20px;
+
+
 }
+
+.point_about_me {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: black;
+  border-radius: 50%;
+  width: 0.3rem;
+  height: 0.3rem;
+  opacity: 0.5;
+}
+
+.point_current {
+  opacity: 1;
+  transition-delay: 50ms;
+}
+
+#fleches_box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+
 
 .arrow_carousel:hover {
   cursor: pointer;
@@ -322,13 +335,6 @@ nav img {
   transform: scale(1);
 }
 
-.arrow_carousel {
-  cursor: pointer;
-}
-
-.arrow_carousel {
-  cursor: pointer;
-}
 
 #L {
   height: 0;
@@ -343,11 +349,6 @@ nav img {
 }
 
 
-#L:hover {
-  transform: scale(1.2);
-  opacity: 1;
-}
-
 #R {
   height: 0;
   width: 0;
@@ -356,29 +357,7 @@ nav img {
   border-bottom: solid transparent 0.45rem;
   border-left: solid var(--font-color01) 0.7rem;
   transition: all 0.3s ease;
-
-  left: 93%;
-  right: 7%;
-  top: 103%;
-  opacity: 0.5;
 }
-
-#R:hover {
-  transform: scale(1.2);
-  opacity: 1;
-}
-
-#R {
-  height: 0;
-  width: 0;
-
-  border-top: solid transparent 0.45rem;
-  border-bottom: solid transparent 0.45rem;
-  border-left: solid var(--font-color01) 0.7rem;
-  transition: all 0.3s ease;
-
-}
-
 
 /*PENSINE*/
 
@@ -390,13 +369,6 @@ nav img {
   border-left: 0.2rem solid rgb(0, 0, 0);
   left: 50%;
   margin-left: -2px;
-}
-
-.arrow-top {
-  margin-left: -0.35rem;
-  border-top: 0.5rem solid rgb(0, 0, 0);
-  border-right: 0.25rem solid transparent;
-  border-left: 0.25rem solid transparent;
 }
 
 .arrow-top {
@@ -469,6 +441,65 @@ nav img {
   background-position: center;
 }
 
+.animation-left {
+  position: relative;
+  animation-name: anim-left;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-delay: 0.1s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: both;
+  transform: (-200px);
+}
+
+.animation-right {
+  position: relative;
+  animation-name: anim-right;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-delay: 0.1s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: both;
+  transform: (-200px);
+}
+
+@keyframes anim-left {
+  from {
+    transform: translateX(-200px);
+    display: none;
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    width: 1px;
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes anim-right {
+  from {
+    transform: translateX(200px);
+    display: none;
+    overflow: hidden;
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    width: 1px;
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
 .grid {
   width: 100%;
   display: grid;
@@ -490,7 +521,7 @@ nav img {
 .grid hr {
   border-top: 2px solid rgb(255, 255, 255);
   width: 6rem;
-  margin: 0.25rem 1rem;
+  margin: 0.25rem 1.25rem;
 }
 
 .grid span {

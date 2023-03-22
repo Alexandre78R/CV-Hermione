@@ -6,6 +6,11 @@ document.body.onload = function () {
     arrowR = document.getElementById("R");
     itemCarousel = document.getElementsByClassName("item_carousel");
     boxOverflow = document.getElementById("box_overflow");
+    point1 = document.getElementById("p1");
+    point2 = document.getElementById("p2");
+    point3 = document.getElementById("p3");
+    point4 = document.getElementById("p4");
+    point5 = document.getElementById("p5");
     afficherMasquer();
 
     arrowR.onclick = function () {
@@ -39,44 +44,67 @@ document.body.onload = function () {
         else
             arrowR.classList.remove("disabled")
 
-        if (position == 0)
+        if (position == 0) {
             arrowL.classList.add("disabled")
-
-        else
+            point1.classList.add("point_current")
+        }
+        else {
             arrowL.classList.remove("disabled")
+            point1.classList.remove("point_current")
+        }
+        if (position == -1)
+            point2.classList.add("point_current")
+        else
+            point2.classList.remove("point_current")
+        if (position == -2)
+            point3.classList.add("point_current")
+        else
+            point3.classList.remove("point_current")
+        if (position == -3)
+            point4.classList.add("point_current")
+        else
+            point4.classList.remove("point_current")
+        if (position == -4)
+            point5.classList.add("point_current")
+        else
+            point5.classList.remove("point_current")
     }
 }
 
-// MENU BURGER START 
-const menuHamburger = document.querySelector(".menu_burger")
-const navLinks = document.querySelector(".nav_links")
-const portraitText = document.querySelector(".portrait_text")
 
+// MENU BURGER START
+const menuHamburger = document.querySelector(".menu_burger");
+const navLinks = document.querySelector(".nav_links");
+const portraitText = document.querySelector(".portrait_text");
+const barreHorizontale = document.querySelector(".menu")
 
-menuHamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('mobile_menu');
-    portraitText.classList.toggle('no_text');
-    portraitText.addEventListener('transitionend', () => {
-        portraitText.hidden = false;
-    })
-})
+menuHamburger.addEventListener("click", () => {
+    portraitText.style.display = "block";
+    navLinks.classList.toggle("mobile_menu");
+    portraitText.classList.toggle("no_text");
+    menuHamburger.classList.toggle("disable");
+    barreHorizontale.classList.toggle("toBlack");
+    portraitText.addEventListener("transitionend", () => {
+        if (portraitText.classList.contains("no_text")) {
+            portraitText.style.display = "none";
+        }
+    });
+});
 
-portraitText.addEventListener('transitionend', () => {
-    portraitText.hidden = true;
-})
+// Fermer le menu burger lors du click sur un titres
 
+const navUl = document.getElementById("navTitle");
+const navNone = document.querySelector(".nav_links");
 
-// Fermer le menu burger lors du click  
-const navUl = document.getElementById("navTitle")
-const navNone = document.querySelector(".nav_links")
+navUl.addEventListener("click", () => {
+    navNone.classList.remove("mobile_menu");
+    portraitText.classList.toggle("no_text");
+    menuHamburger.classList.toggle("disable");
+    barreHorizontale.classList.toggle("toBlack");
+    portraitText.style.display = "block";
+});
 
-navUl.addEventListener('click', () => {
-    navNone.classList.remove('mobile_menu');
-    portraitText.classList.toggle('no_text');
-    // portraitText.addEventListener('transitionend',()=>{
-    //     portraitText.hidden = false;
-    // })
-})
+// MENU BURGER END
 
 // MENU BURGER END
 
@@ -91,3 +119,30 @@ button.addEventListener('click', function () {
     // background.style.height = '56rem';
     // footer.style.marginTop = '7rem';
 });
+/* SIDE NAV BAR START */
+
+const ligne01 = document.getElementById("ligne1");
+const ligne02 = document.getElementById("ligne2");
+const ligne03 = document.getElementById("ligne3");
+
+window.addEventListener("scroll", event => {
+    let { pageYOffset } = window;
+    let scroll = this.scrollY;
+
+    if (pageYOffset <= 1200) {
+        ligne01.style.opacity = 1;
+        ligne02.style.opacity = 0.5;
+        ligne03.style.opacity = 0.5;
+    }
+    else if (pageYOffset >= 1201 && pageYOffset <= 2055) {
+        ligne01.style.opacity = 0.5;
+        ligne02.style.opacity = 1;
+        ligne03.style.opacity = 0.5;
+    }
+    else if (window.pageYOffset >= 2055) {
+        ligne02.style.opacity = 0.5;
+        ligne03.style.opacity = 1;
+    }
+});
+
+/* SIDE NAV BAR END */
