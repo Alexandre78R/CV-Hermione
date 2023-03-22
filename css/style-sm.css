@@ -26,12 +26,14 @@ html {
   scroll-behavior: auto;
 }
 
-/* html, body {
+html,
+body {
   overflow-x: hidden;
 }
+
 body {
   position: relative
-} */
+}
 
 /* PORTRAIT */
 
@@ -516,7 +518,6 @@ nav img {
 }
 
 .blur {
-
   z-index: 1;
   position: absolute;
   margin: 0;
@@ -532,7 +533,7 @@ nav img {
   position: absolute;
   z-index: 0;
   width: 100%;
-  height: 48rem;
+  height: 56rem;
   background: linear-gradient(180deg,
       #2b2f53 6.15%,
       rgba(165, 164, 181, 0.5) 100%);
@@ -564,7 +565,7 @@ nav img {
   font-weight: var(--font-weight-h2);
   display: flex;
   justify-content: center;
-  padding-top: 4rem;
+  padding-top: 2rem;
   margin-bottom: 1rem;
 }
 
@@ -576,8 +577,7 @@ nav img {
 }
 
 .contact form input,
-textarea,
-button {
+textarea {
   width: 16rem;
   background-color: rgba(228, 228, 228, 0.2);
   border: 2px solid rgba(233, 233, 233, 0.7);
@@ -589,15 +589,10 @@ button {
   text-align: center;
 }
 
-
-/* to add style to autocomplete field
-input:-webkit-autofill,
-textarea:-webkit,
-input:-webkit-autofill:focus {
-    -webkit-text-fill-color: #2B2F53;
-    -webkit-box-shadow: 0 0 0px 40rem hsla(0, 0%, 89%, 0.804) inset;
-} */
-
+input,
+textarea:focus {
+  outline: none;
+}
 
 .contact form input {
   height: 40px;
@@ -634,11 +629,38 @@ input:-webkit-autofill:focus {
   align-items: center;
 }
 
-.contact form button {
+.contact .button {
   width: 4.5rem;
-  height: 1.5rem;
+  height: 1.8rem;
   color: var(--font-color02);
-  margin-bottom: 3rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem
+}
+
+/* BUBBLE */
+.contact .bubble {
+  display: none;
+  margin: 0 4rem 0 4rem;
+  padding: 0.5rem;
+  width: 16rem;
+  height: 4.5rem;
+  position: relative;
+  background-color: rgba(228, 228, 228, 0.2);
+  border-radius: 0.5rem;
+  text-align: center;
+  font-size: 13px;
+  font-family: var(--text-font);
+}
+
+.contact .bubble::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 43.9%;
+  border-top: 1rem solid rgba(228, 228, 228, 0.2);
+  border-left: 1rem solid transparent;
+  border-right: 1rem solid transparent;
 }
 
 /* HEDWIDGE */
@@ -649,6 +671,9 @@ input:-webkit-autofill:focus {
 
 .contact .hedwige img {
   height: 3.5rem;
+  position: absolute;
+  margin-top: 6rem;
+  /* bottom: -4vh; */
   margin-bottom: -0.3rem;
 }
 
@@ -659,13 +684,16 @@ input:-webkit-autofill:focus {
 }
 
 .contact .arrow-container img {
+  position: absolute;
+  bottom: -5vh;
   width: 45%;
   height: 0.5rem;
 }
 
 /* FOOTER */
-.contact .footer .copyright p {
+.footer {
   color: var(--font-color01);
   padding: 1rem;
   text-align: center;
+  font-family: var(--text-font);
 }

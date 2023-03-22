@@ -78,4 +78,16 @@ navUl.addEventListener('click', () => {
     // })
 })
 
-// MENU BURGER END 
+// MENU BURGER END
+
+// BUBBLE POP UP WHEN CLICK ON BUTTON //
+const button = document.querySelector('.button');
+const popUp = document.querySelector('.bubble');
+const background = document.querySelector('.gradient');
+const footer = document.querySelector('.footer');
+
+button.addEventListener('click', function () {
+    popUp.style.display = 'block';
+    // background.style.height = '56rem';
+    // footer.style.marginTop = '7rem';
+});
