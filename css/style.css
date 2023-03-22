@@ -61,7 +61,7 @@ display: none;
 .citation {
   position: absolute;
   right:6%;
-  margin-top: 30.5rem;
+  margin-top: 79vh;
 }
 .citation p {
     font-family: var(--text-font);
