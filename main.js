@@ -47,9 +47,10 @@ document.body.onload = function () {
             arrowR.classList.remove("disabled")
 
         if (position == 0) {
-            if (window.matchMedia("(min-width: 430px)").matches){ 
-                mainImage.style.backgroundImage="url(/img/Hermione.jpg)"
-                mainText.style.opacity=0.8;}
+            if (window.matchMedia("(min-width: 430px)").matches) {
+                mainImage.style.backgroundImage = "url(/img/Hermione.jpg)"
+                mainText.style.opacity = 0.8;
+            }
             arrowL.classList.add("disabled")
             point1.classList.add("point_current")
         }
@@ -57,38 +58,38 @@ document.body.onload = function () {
             arrowL.classList.remove("disabled")
             point1.classList.remove("point_current")
         }
-        if (position == -1){
+        if (position == -1) {
             point2.classList.add("point_current")
-            if (window.matchMedia("(min-width: 430px)").matches){
-                mainImage.style.backgroundImage="url(/img/hermione_house.jpeg)"
-                mainText.style.opacity=0;
+            if (window.matchMedia("(min-width: 430px)").matches) {
+                mainImage.style.backgroundImage = "url(/img/hermione_house.jpeg)"
+                mainText.style.opacity = 0;
             }
         }
         else
             point2.classList.remove("point_current")
-        if (position == -2){
+        if (position == -2) {
             point3.classList.add("point_current")
-            if (window.matchMedia("(min-width: 430px)").matches){
-                mainImage.style.backgroundImage="url(/img/magic_wand.jpeg)"
-                mainText.style.opacity=0;
+            if (window.matchMedia("(min-width: 430px)").matches) {
+                mainImage.style.backgroundImage = "url(/img/magic_wand.jpeg)"
+                mainText.style.opacity = 0;
             }
         }
         else
             point3.classList.remove("point_current")
-        if (position == -3){
+        if (position == -3) {
             point4.classList.add("point_current")
-            if (window.matchMedia("(min-width: 430px)").matches){
-                mainImage.style.backgroundImage="url(/img/otter_patronus.jpeg)"
-                mainText.style.opacity=0;
+            if (window.matchMedia("(min-width: 430px)").matches) {
+                mainImage.style.backgroundImage = "url(/img/otter_patronus.jpeg)"
+                mainText.style.opacity = 0;
             }
         }
         else
             point4.classList.remove("point_current")
-        if (position == -4){
+        if (position == -4) {
             point5.classList.add("point_current")
-            if (window.matchMedia("(min-width: 430px)").matches){
-                mainImage.style.backgroundImage="url(/img/hermione_cat.jpeg)"
-                mainText.style.opacity=0;
+            if (window.matchMedia("(min-width: 430px)").matches) {
+                mainImage.style.backgroundImage = "url(/img/hermione_cat.jpeg)"
+                mainText.style.opacity = 0;
             }
         }
         else
@@ -136,8 +137,6 @@ navUl.addEventListener("click", () => {
 // BUBBLE POPS WHEN YOU CLICK ON SEND //
 const button = document.querySelector('.button');
 const popUp = document.querySelector('.bubble');
-const background = document.querySelector('.gradient');
-const footer = document.querySelector('.footer');
 const hedwigeMobile = document.querySelector('.hedwige-mobile');
 const hedwigeDesktop = document.querySelector('.hedwige-desktop');
 const close = document.querySelector('.close');
@@ -150,9 +149,8 @@ function senderName() {
 
 button.addEventListener('click', function () {
     popUp.style.display = 'block';
-    // background.style.height = '56rem';
     hedwigeMobile.style.marginTop = '-5.5rem';
-    hedwigeDesktop.style.marginTop = '-4.87rem';//-78px
+    hedwigeDesktop.style.marginTop = '-78px';//-77px depending on the screen size :(
     senderName();
 });
 
@@ -178,30 +176,30 @@ window.addEventListener("scroll", event => {
         ligne02.style.opacity = 0.5;
         ligne03.style.opacity = 0.5;
     }
-   
-    if(pageYOffset<=700 && pageYOffset>=200){
-        if (window.matchMedia("(min-width: 430px)").matches){
-            mainImage.style.backgroundImage="url(/img/Hermione.jpg)"
-            mainText.style.opacity=0.8;
+
+    if (pageYOffset <= 700 && pageYOffset >= 200) {
+        if (window.matchMedia("(min-width: 430px)").matches) {
+            mainImage.style.backgroundImage = "url(/img/Hermione.jpg)"
+            mainText.style.opacity = 0.8;
         }
     }
-      
+
 
     else if (pageYOffset >= 1000 && pageYOffset <= 1700) {
         ligne01.style.opacity = 0.5;
         ligne02.style.opacity = 1;
         ligne03.style.opacity = 0.5;
-        if (window.matchMedia("(min-width: 430px)").matches){
-            mainImage.style.backgroundImage="url(/img/pensieve_dekstop.jpg)"
-            mainText.style.opacity=0;
+        if (window.matchMedia("(min-width: 430px)").matches) {
+            mainImage.style.backgroundImage = "url(/img/pensieve_dekstop.jpg)"
+            mainText.style.opacity = 0;
         }
     }
     else if (window.pageYOffset >= 1700) {
         ligne02.style.opacity = 0.5;
         ligne03.style.opacity = 1;
-        if (window.matchMedia("(min-width: 430px)").matches){
-            mainImage.style.backgroundImage="url(/img/hogwarts_letters.jpeg)"
-            mainText.style.opacity=0;
+        if (window.matchMedia("(min-width: 430px)").matches) {
+            mainImage.style.backgroundImage = "url(/img/hogwarts_letters.jpeg)"
+            mainText.style.opacity = 0;
         }
     }
 });
