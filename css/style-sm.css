@@ -605,7 +605,7 @@ textarea:focus {
 
 
 .contact form textarea {
-  margin: 0.3rem 0 1.25rem 0;
+  margin: 0.3rem 0 0.5rem 0;
   border-radius: 0.5rem;
   padding: 0.5rem;
   resize: none;
@@ -621,11 +621,12 @@ textarea:focus {
 }
 
 
-.contact form ::placeholder {
-  font-size: var(--text-size-p);
-  color: var(--primary-color);
-  opacity: 0.5;
-  align-items: center;
+#error-message-firstname,
+#error-message-email,
+#error-message-text {
+  color: red;
+  font-family: var(--text-font);
+  font-size: 13px;
 }
 
 .contact .button {
@@ -635,7 +636,10 @@ textarea:focus {
   justify-content: center;
   align-items: center;
   margin-bottom: 1rem;
+  margin-top: 0.5rem;
 }
+
+
 
 /* BUBBLE */
 .contact .bubble {
