@@ -205,5 +205,4 @@ window.addEventListener("scroll", event => {
         }
     }
 });
-
 /* SIDE NAV BAR END */
