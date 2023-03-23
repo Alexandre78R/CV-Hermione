@@ -164,35 +164,29 @@ close.addEventListener('click', function () {
 
 
 // Pensine Text Animation
-const observerLeft = new IntersectionObserver((entries) => {
-    console.log(entries);
+const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-        console.log(entry);
-        if (entry.isIntersecting) {
-            entry.target.classList.add('animation-lef');
-        } else {
-            entry.target.classList.remove('animation-lef');
+        if (entry.target.className === "hidden-left" || entry.target.className === "hidden-left animation-left") {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animation-left');
+            } else {
+                entry.target.classList.remove('animation-left');
+            }
+        } else if (entry.target.className === "hidden-right" || entry.target.className === "hidden-right animation-right") {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animation-right');
+            } else {
+                entry.target.classList.remove('animation-right');
+            }
         }
     });
 });
 
 const hiddenElementsLeft = document.querySelectorAll('.hidden-left');
-hiddenElementsLeft.forEach((el) => observerLeft.observe(el));
-
-const observerRight = new IntersectionObserver((entries) => {
-    console.log(entries);
-    entries.forEach((entry) => {
-        console.log(entry);
-        if (entry.isIntersecting) {
-            entry.target.classList.add('animation-right');
-        } else {
-            entry.target.classList.remove('animation-right');
-        }
-    });
-});
+hiddenElementsLeft.forEach((el) => observer.observe(el));
 
 const hiddenElementsRight = document.querySelectorAll('.hidden-right');
-hiddenElementsRight.forEach((el) => observerRight.observe(el));
+hiddenElementsRight.forEach((el) => observer.observe(el));
 
 /* SIDE NAV BAR START */
 
@@ -202,7 +196,6 @@ const ligne03 = document.getElementById("ligne3");
 
 window.addEventListener("scroll", event => {
     let { pageYOffset } = window;
-    // console.log("pageYOffset", pageYOffset);
     let scroll = this.scrollY;
 
     if (pageYOffset <= 1000) {
