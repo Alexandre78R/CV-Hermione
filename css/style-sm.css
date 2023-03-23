@@ -453,7 +453,7 @@ nav img {
   transition: all 2.4s;
 }
 
-.animation-lef {
+.animation-left {
   opacity: 1;
   transform: translateX(0);
   animation-timing-function: ease-in;
