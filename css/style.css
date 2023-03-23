@@ -47,9 +47,14 @@ body::-webkit-scrollbar {
     width: 1.75rem;
     height: 1.75rem;
     opacity: 0.8;
-}
+  }
 
-.ligne_scroll {
+  .image_scroll img:hover{
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+  }
+
+  .ligne_scroll{
     margin-top: -3.5vh;
     height: 9rem;
 }
@@ -84,6 +89,7 @@ nav {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    transition-duration: 0.7s;
 }
 
 .portrait h1 {
@@ -109,6 +115,11 @@ nav {
 .portrait img {
     display: none;
 }
+
+.portrait_text{
+    transition-duration: 0.5s;
+}
+
 
 .citation {
     position: absolute;
