@@ -133,17 +133,36 @@ navUl.addEventListener("click", () => {
 
 // MENU BURGER END
 
-// BUBBLE POP UP WHEN CLICK ON BUTTON //
+// BUBBLE POPS WHEN YOU CLICK ON SEND //
 const button = document.querySelector('.button');
 const popUp = document.querySelector('.bubble');
 const background = document.querySelector('.gradient');
 const footer = document.querySelector('.footer');
+const hedwigeMobile = document.querySelector('.hedwige-mobile');
+const hedwigeDesktop = document.querySelector('.hedwige-desktop');
+const close = document.querySelector('.close');
+
+// PERSONNALISATION OF THE POPUP //
+function senderName() {
+    let imput = document.getElementById('firstname').value;
+    document.getElementById('name').innerHTML = imput;
+}
 
 button.addEventListener('click', function () {
     popUp.style.display = 'block';
     // background.style.height = '56rem';
-    // footer.style.marginTop = '7rem';
+    hedwigeMobile.style.marginTop = '-5.5rem';
+    hedwigeDesktop.style.marginTop = '-4.87rem';//-78px
+    senderName();
 });
+
+close.addEventListener('click', function () {
+    popUp.style.display = 'none';
+    // hedwigeMobile.style.marginTop = '-5.5rem';
+    hedwigeDesktop.style.marginTop = '5.5rem';
+})
+
+
 /* SIDE NAV BAR START */
 
 const ligne01 = document.getElementById("ligne1");
