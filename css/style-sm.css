@@ -434,7 +434,7 @@ nav img {
 /* VERTICAL LINE END */
 .pensine {
   width: 100%;
-  height: 45rem;
+  height: 42rem;
   background-image: url("/img/pensine.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -506,7 +506,6 @@ nav img {
 /*CONTACT*/
 .contact {
   width: 100%;
-  height: 20rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -526,10 +525,10 @@ nav img {
   position: absolute;
   margin: 0;
   padding: 0;
-  margin-top: 18rem;
+  margin-top: 17rem;
   backdrop-filter: blur(10px);
   width: 100%;
-  height: 49rem;
+  height: 61rem;
   border-radius: 2rem 2rem 0 0;
 }
 
@@ -541,8 +540,6 @@ nav img {
   background: linear-gradient(180deg,
       #2b2f53 6.15%,
       rgba(165, 164, 181, 0.5) 100%);
-  background-size: cover;
-  background-position: center;
 }
 
 /*ARROWS*/
@@ -600,12 +597,12 @@ textarea:focus {
 
 .contact form input {
   height: 40px;
-  margin: 0.3rem 0 1.25rem 0;
+  margin: 0.3rem 0 0.5rem 0;
 }
 
 
 .contact form textarea {
-  margin: 0.3rem 0 1.25rem 0;
+  margin: 0.3rem 0 0.5rem 0;
   border-radius: 0.5rem;
   padding: 0.5rem;
   resize: none;
@@ -621,12 +618,16 @@ textarea:focus {
 }
 
 
-.contact form ::placeholder {
-  font-size: var(--text-size-p);
-  color: var(--primary-color);
-  opacity: 0.5;
-  align-items: center;
+#error-message-firstname,
+#error-message-email,
+#error-message-text {
+  color: rgb(255, 111, 0);
+  font-family: var(--text-font);
+  font-size: 13px;
+  margin-bottom: 0.5rem;
+  opacity: 0;
 }
+
 
 .contact .button {
   width: 4.5rem;
@@ -635,11 +636,13 @@ textarea:focus {
   justify-content: center;
   align-items: center;
   margin-bottom: 1rem;
+  margin-top: 0.5rem;
 }
+
+
 
 /* BUBBLE */
 .contact .bubble {
-  display: none;
   margin: 0 4rem 0 4rem;
   padding: 0.5rem;
   width: 16rem;
@@ -650,7 +653,7 @@ textarea:focus {
   text-align: center;
   font-size: 13px;
   font-family: var(--text-font);
-  transition-duration: all 0.5s ease;
+  opacity: 0;
 }
 
 .contact .bubble .close {
@@ -659,7 +662,6 @@ textarea:focus {
   left: 90%;
   top: 0.3rem;
   filter: invert(100%);
-  opacity: 54%;
 }
 
 .contact .bubble::after {
@@ -673,14 +675,14 @@ textarea:focus {
 }
 
 /* HEDWIDGE */
-.contact .hedwige-mobile {
+.contact .hedwige {
   display: flex;
   justify-content: center;
 }
 
-.contact .hedwige-mobile img {
+.contact .hedwige img {
   height: 3.5rem;
-  margin-top: 6.7rem;
+  margin-top: 1.7rem;
   margin-bottom: -0.3rem;
 }
 
@@ -698,16 +700,12 @@ textarea:focus {
 
 /* FOOTER */
 
-/* .footer-container {
-  position: relative;
-  height: 20vh;
-} */
 
 .footer {
   position: absolute;
   width: 100%;
-  margin-top: 35.5rem;
+  margin-top: 5.5rem;
   color: var(--font-color01);
   text-align: center;
-  font-family: var(--text-font);
+  z-index: 1;
 }

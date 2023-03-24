@@ -182,10 +182,8 @@
                 <p class="hidden-right">1991 - 1992</p>
             </div>
             <div class="blur"></div>
-            <!-- Thomas -->
         </section>
         <section class="contact" id="contact">
-            <!-- Léa -->
             <div class="index3">
                 <div class="directional-arrows-container">
                     <div class="directional-arrows">
@@ -193,15 +191,21 @@
                 </div>
                 <h2> CONTACT </h2>
                 <!-- formulaire -->
-                <form>
+                <form id="form">
                     <label for="firstname">Your firstname:</label>
                     <input type="text" id="firstname" name="firstname" placeholder="Severus" autocomplete="off">
+                    <p id="error-message-firstname"> What is your firstname again?</p>
+
                     <label for="email">Your email:</label>
-                    <input type="email" id="email" name="email" placeholder="severus.rogue@gmail.com" autocomplete="off" ">
+                    <input type="email" id="email" name="email" placeholder="severus.rogue@gmail.com"
+                        autocomplete="off">
+                    <p id="error-message-email"> We need your email to send you an owl back.</p>
+
                     <label for=" message">Your message:</label>
-                    <textarea name="message" id="message" cols="40" rows="8"
+                    <textarea name="message" id="message" cols="40" rows="7"
                         placeholder="Dear Miss Granger,..."></textarea>
-                    <!-- <button class="btn">SEND</button> -->
+                    <p id="error-message-text"> Oopsie, Your message is empty. </p>
+
                     <input type="button" value="SEND" class="button">
                 </form>
                 <div class="bubble">
@@ -210,23 +214,20 @@
                         Hedwige has successfully sent your message! You will received an owl shortly.</p>
                 </div>
                 <div classe="bubble-triangle"></div>
-                <div class="hedwige-desktop">
-                    <div class="hedwige-mobile">
-                        <img src="img/Hedwige.png" alt="Hedwige the owl">
-                    </div>
+                <div class="hedwige">
+                    <img src="img/Hedwige.png" alt="Hedwige the owl">
                 </div>
                 <div class="arrow-container">
                     <img src="/img/Hedwige_arrow.png" alt="arrow">
                 </div>
             </div>
-            <div class="gradient"></div>
+            <div class="gradient">
+            </div>
         </section>
     </main>
-    <!-- <div class="footer-container"> -->
     <footer class="footer">
         &copy;Hermione-granger.fr
-        <!-- </footer> -->
-        </div>
+    </footer>
 </body>
 
 </html>
