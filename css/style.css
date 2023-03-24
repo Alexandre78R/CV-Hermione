@@ -449,7 +449,6 @@ main {
 }
 
 
-
 /*CONTACT*/
 .contact {
     margin-top: 14rem;
@@ -469,8 +468,8 @@ main {
     font-weight: var(--font-weight-h2);
     display: flex;
     justify-content: center;
-    padding-top: 0.5rem;
-    margin-bottom: 3rem;
+    /* padding-top: 0.5rem; */
+    margin-top: -2rem;
 }
 
 /* FORM */
@@ -497,11 +496,12 @@ textarea {
 .contact form label {
     font-family: var(--text-font);
     font-size: var(--text-size-p);
+    margin-top: 1rem;
 }
 
 .contact form input {
     height: 3rem;
-    margin: 0.5rem 0 2.25rem 0;
+    margin: 0.5rem 0 0.5rem 0;
 }
 
 .contact form textarea {
@@ -517,7 +517,7 @@ textarea {
 .contact form ::placeholder {
     text-align: center;
     font-size: var(--text-size-p);
-    opacity: 0.5;
+    opacity: 0.3;
     align-items: center;
 }
 
@@ -526,9 +526,9 @@ textarea {
     height: 2.5rem;
     color: var(--font-color01);
     background-color: rgba(233, 233, 233, 0.7);
-    border: 2px solid rgba(233, 233, 233, 0.7);
     justify-content: center;
     align-items: center;
+    margin-top: 1rem;
     margin-bottom: 1rem;
     cursor: pointer;
 }
@@ -545,11 +545,12 @@ textarea {
     color: red;
     font-family: var(--text-font);
     font-size: 18px;
+    opacity: 0;
+    border-bottom: 1rem;
 }
 
 /* BUBBLE */
 .contact .bubble {
-    display: none;
     width: 23rem;
     margin: 0 4rem 0 4rem;
     padding: 23px;
@@ -558,6 +559,7 @@ textarea {
     border-radius: 0.5rem;
     text-align: center;
     font-size: 23px;
+    opacity: 0;
 }
 
 .contact .bubble .close {
@@ -580,15 +582,15 @@ textarea {
 
 
 /* HEDWIDGE */
-.contact .hedwige-desktop {
+.contact .hedwige {
     display: flex;
     justify-content: center;
 }
 
-.contact .hedwige-desktop img {
+.contact .hedwige img {
     height: 5.5rem;
-    margin-top: 12.8rem;
-    margin-bottom: -0.7rem;
+    margin-top: 1.8rem;
+    margin-bottom: -0.5rem;
 }
 
 /* ARROW */

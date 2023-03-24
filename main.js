@@ -135,8 +135,6 @@ navUl.addEventListener("click", () => {
 
 const button = document.querySelector('.button');
 const popUp = document.querySelector('.bubble');
-const hedwigeMobile = document.querySelector('.hedwige-mobile');
-const hedwigeDesktop = document.querySelector('.hedwige-desktop');
 const close = document.querySelector('.close');
 
 
@@ -150,31 +148,31 @@ button.addEventListener('click', function (e) {
     let messageErrorText = document.getElementById('error-message-text');
 
     if (userName === '') {
-        messageErrorUser.hidden = false;
+        messageErrorUser.style.opacity = '1';
+    } else {
+        messageErrorUser.style.opacity = '0'
     }
     if (userEmail === '') {
-        messageErrorEmail.hidden = false;
+        messageErrorEmail.style.opacity = '1';
+    } else {
+        messageErrorEmail.style.opacity = '0';
     }
     if (userMessage === '') {
-        messageErrorText.hidden = false;
+        messageErrorText.style.opacity = '1';
+    } else {
+        messageErrorText.style.opacity = '0';
     }
-    else {
-        popUp.style.display = 'block';
+
+    if (userName !== '' && userEmail !== '' && userMessage !== '') {
+        popUp.style.opacity = '1';
         popUp.style.transition = 'all 0.5s ease';
-        hedwigeMobile.style.marginTop = '-5.5rem';
-        hedwigeDesktop.style.marginTop = '-76px';//-78px -77px depending on the screen size :(
         document.getElementById('name').innerHTML = userName;
-        messageErrorUser.hidden = true;
-        messageErrorEmail.hidden = true;
-        messageErrorText.hidden = true;
     };
 });
 
 // BUBBLE ClOSES WHEN YOU CLICK ON THE CROSS//
 close.addEventListener('click', function () {
-    popUp.style.display = 'none';
-    // hedwigeMobile.style.marginTop = '-5.5rem';
-    hedwigeDesktop.style.marginTop = '5.5rem';
+    popUp.style.opacity = '0';
 })
 
 
