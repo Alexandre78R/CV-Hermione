@@ -528,7 +528,7 @@ nav img {
   margin-top: 17rem;
   backdrop-filter: blur(10px);
   width: 100%;
-  height: 61rem;
+  height: 50rem;
   border-radius: 2rem 2rem 0 0;
 }
 
@@ -536,10 +536,10 @@ nav img {
   position: absolute;
   z-index: 0;
   width: 100%;
-  height: 58rem;
+  height: 55rem;
   background: linear-gradient(180deg,
       #2b2f53 6.15%,
-      rgba(165, 164, 181, 0.5) 100%);
+      rgba(165, 164, 181, 0.5) 179%);
 }
 
 /*ARROWS*/
@@ -704,7 +704,7 @@ textarea:focus {
 .footer {
   position: absolute;
   width: 100%;
-  margin-top: 5.5rem;
+  margin-top: 2.5rem;
   color: var(--font-color01);
   text-align: center;
   z-index: 1;
