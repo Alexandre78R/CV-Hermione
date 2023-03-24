@@ -66,7 +66,6 @@ body::-webkit-scrollbar {
     width: 3px;
     height: 2.25rem;
     border-width: 0;
-    color: #000;
     background-color: #000;
 }
 
@@ -526,7 +525,6 @@ textarea {
     height: 2.5rem;
     color: var(--font-color01);
     background-color: rgba(233, 233, 233, 0.7);
-    border: 2px solid rgba(233, 233, 233, 0.7);
     justify-content: center;
     align-items: center;
     margin-bottom: 1rem;
