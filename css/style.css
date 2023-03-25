@@ -85,10 +85,39 @@ nav {
     height: 100%;
     background-color: #fff;
     background-image: url("/img/Hermione.jpg");
+    opacity: 1;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     transition-duration: 0.7s;
+}
+
+.imgHermione {
+    background-image: url("/img/Hermione.jpg");
+}
+
+.imgHermioneHouse {
+    background-image: url("/img/hermione_house.jpeg");
+}
+
+.imgOtterPatronus {
+    background-image: url("/img/otter_patronus.jpeg");
+}
+
+.imgMagicWand {
+    background-image : url("/img/magic_wand.jpeg");
+}
+
+.imgCat {
+    background-image : url("/img/hermione_cat.jpeg");
+}
+
+.imgPensine {
+    background-image: url("/img/pensieve_dekstop.jpg");
+}
+
+.imgContact {
+    background-image: url("/img/hogwarts_letters.jpeg");
 }
 
 .portrait h1 {
