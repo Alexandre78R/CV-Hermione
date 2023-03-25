@@ -174,30 +174,31 @@ close.addEventListener('click', function () {
     popUp.style.opacity = '0';
 })
 
+const hiddenElementsLeft = document.querySelectorAll('.hidden-left');
+const hiddenElementsRight = document.querySelectorAll('.hidden-right');
 
 // Pensine Text Animation
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-        if (entry.target.className === "hidden-left" || entry.target.className === "hidden-left animation-left") {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animation-left');
-            } else {
-                entry.target.classList.remove('animation-left');
-            }
-        } else if (entry.target.className === "hidden-right" || entry.target.className === "hidden-right animation-right") {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animation-right');
-            } else {
-                entry.target.classList.remove('animation-right');
+        if (window.matchMedia("(min-width: 430px)").matches) {
+            if (entry.target.className === "hidden-left" || entry.target.className === "hidden-left animation-left") {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animation-left');
+                } else {
+                    entry.target.classList.remove('animation-left');
+                }
+            } else if (entry.target.className === "hidden-right" || entry.target.className === "hidden-right animation-right") {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animation-right');
+                } else {
+                    entry.target.classList.remove('animation-right');
+                }
             }
         }
     });
 });
 
-const hiddenElementsLeft = document.querySelectorAll('.hidden-left');
 hiddenElementsLeft.forEach((el) => observer.observe(el));
-
-const hiddenElementsRight = document.querySelectorAll('.hidden-right');
 hiddenElementsRight.forEach((el) => observer.observe(el));
 
 /* SIDE NAV BAR START */
