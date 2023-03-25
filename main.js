@@ -47,8 +47,9 @@ document.body.onload = function () {
 
         if (position == 0) {
             if (window.matchMedia("(min-width: 430px)").matches) {
-                mainImage.style.backgroundImage = "url(/img/Hermione.jpg)";
-                mainText.style.opacity = 0.8;
+                mainImage.classList.remove('imgHermioneHouse');
+                mainImage.classList.add('imgHermione');
+                mainText.style.opacity = 1;
             }
             arrowL.classList.add("disabled");
             point1.classList.add("point_current");
@@ -60,7 +61,9 @@ document.body.onload = function () {
         if (position == -1) {
             point2.classList.add("point_current");
             if (window.matchMedia("(min-width: 430px)").matches) {
-                mainImage.style.backgroundImage = "url(/img/hermione_house.jpeg)";
+                mainImage.classList.remove('imgHermione');
+                mainImage.classList.remove('imgMagicWand');
+                mainImage.classList.add('imgHermioneHouse');
                 mainText.style.opacity = 0;
             }
         }
@@ -69,7 +72,9 @@ document.body.onload = function () {
         if (position == -2) {
             point3.classList.add("point_current");
             if (window.matchMedia("(min-width: 430px)").matches) {
-                mainImage.style.backgroundImage = "url(/img/magic_wand.jpeg)";
+                mainImage.classList.remove('imgHermioneHouse');
+                mainImage.classList.remove('imgOtterPatronus');
+                mainImage.classList.add('imgMagicWand');
                 mainText.style.opacity = 0;
             }
         }
@@ -78,7 +83,9 @@ document.body.onload = function () {
         if (position == -3) {
             point4.classList.add("point_current");
             if (window.matchMedia("(min-width: 430px)").matches) {
-                mainImage.style.backgroundImage = "url(/img/otter_patronus.jpeg)";
+                mainImage.classList.remove('imgMagicWand');
+                mainImage.classList.remove('imgCat');
+                mainImage.classList.add('imgOtterPatronus');
                 mainText.style.opacity = 0;
             }
         }
@@ -87,7 +94,8 @@ document.body.onload = function () {
         if (position == -4) {
             point5.classList.add("point_current");
             if (window.matchMedia("(min-width: 430px)").matches) {
-                mainImage.style.backgroundImage = "url(/img/hermione_cat.jpeg)";
+                mainImage.classList.remove('imgOtterPatronus');
+                mainImage.classList.add('imgCat');
                 mainText.style.opacity = 0;
             }
         }
@@ -174,13 +182,8 @@ close.addEventListener('click', function () {
     popUp.style.opacity = '0';
 })
 
-
 const hiddenElementsLeft = document.querySelectorAll('.hidden-left');
 const hiddenElementsRight = document.querySelectorAll('.hidden-right');
-
-const ligne01 = document.getElementById("ligne1");
-const ligne02 = document.getElementById("ligne2");
-const ligne03 = document.getElementById("ligne3");
 
 // Pensine Text Animation
 const observer = new IntersectionObserver((entries) => {
@@ -207,41 +210,99 @@ hiddenElementsLeft.forEach((el) => observer.observe(el));
 hiddenElementsRight.forEach((el) => observer.observe(el));
 
 /* SIDE NAV BAR START */
+const pensineElement = document.querySelectorAll('.pensine');
+const formElement = document.querySelectorAll('.form');
+const aboutElement = document.querySelectorAll('.about_me');
+const blurEleement = document.querySelectorAll('.blur');
+const skillElement = document.querySelectorAll('.skills');
 
-window.addEventListener("scroll", event => {
-    let { pageYOffset } = window;
-    let scroll = this.scrollY;
+const ligne01 = document.getElementById("ligne1");
+const ligne02 = document.getElementById("ligne2");
+const ligne03 = document.getElementById("ligne3");
 
-    if (pageYOffset <= 1000) {
-        ligne01.style.opacity = 1;
-        ligne02.style.opacity = 0.5;
-        ligne03.style.opacity = 0.5;
-    }
-
-    if (pageYOffset <= 700 && pageYOffset >= 200) {
+const observerImg = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
         if (window.matchMedia("(min-width: 430px)").matches) {
-            mainImage.style.backgroundImage = "url(/img/Hermione.jpg)";
-            mainText.style.opacity = 0.8;
-        }
-    }
+            if (entry.target.className === "about_me") {
+                if (entry.isIntersecting) {
+                    ligne01.style.opacity = 1;
+                    ligne02.style.opacity = 0.5;
+                    ligne03.style.opacity = 0.5;
+                    if (position !== 0) {
+                        mainText.style.opacity = 0;
+                    } else {
+                        mainText.style.opacity = 1;
+                    }
+                    if (mainImage.className === 'portrait imgPensine imgHermione') {
+                        mainImage.classList.remove('imgPensine');
+                        ligne01.style.opacity = 1;
+                        ligne02.style.opacity = 0.5;
+                        ligne03.style.opacity = 0.5;
+                        mainText.style.opacity = 1;
+                    }
+                    mainImage.classList.add('imgHermione');
+                    if (mainImage.className === "portrait imgPensine imgHermione"){
+                        mainImage.classList.remove('imgPensine');
+                    } 
+                } else {
+                    mainImage.classList.remove('imgHermione');
+                }
+            } else if (entry.target.className === "pensine") {
+                if (entry.isIntersecting) {
+                    ligne01.style.opacity = 0.5;
+                    ligne02.style.opacity = 1;
+                    ligne03.style.opacity = 0.5;
+                    mainText.style.opacity = 0;
+                    mainImage.classList.add('imgPensine');
+                } else { 
+                    mainImage.classList.remove('imgPensine');
+                    if (mainImage.className === 'portrait') {
+                        mainText.style.opacity = 1;
+                    }
+                }
+            } else if (entry.target.className === "blur") {
+                if (entry.isIntersecting) {
+                    ligne01.style.opacity = 0.5;
+                    ligne02.style.opacity = 1;
+                    ligne03.style.opacity = 0.5;
+                    mainText.style.opacity = 0;
+                    if (mainImage.className === 'portrait imgContact imgPensine') {
+                        mainImage.classList.remove('imgContact');
+                    }
+                    mainImage.classList.add('imgPensine');
+                } else {
+                    mainImage.classList.remove('imgPensine');
+                    if (mainImage.className === 'portrait') {
+                        mainText.style.opacity = 1;
+                        ligne01.style.opacity = 1;
+                        ligne02.style.opacity = 0.5;
+                        ligne03.style.opacity = 0.5;
+                    }
+                }
+            } else if (entry.target.className === "form") {
 
-
-    else if (pageYOffset >= 1000 && pageYOffset <= 1700) {
-        ligne01.style.opacity = 0.5;
-        ligne02.style.opacity = 1;
-        ligne03.style.opacity = 0.5;
-        if (window.matchMedia("(min-width: 430px)").matches) {
-            mainImage.style.backgroundImage = "url(/img/pensieve_dekstop.jpg)";
-            mainText.style.opacity = 0;
+                if (entry.isIntersecting) {
+                    ligne01.style.opacity = 0.5;
+                    ligne02.style.opacity = 0.5;
+                    ligne03.style.opacity = 1;
+                    mainText.style.opacity = 0;
+                    mainImage.classList.add('imgContact');
+                } else {
+                    ligne01.style.opacity = 0.5;
+                    ligne02.style.opacity = 1;
+                    ligne03.style.opacity = 0.5;
+                    mainText.style.opacity = 0;
+                    mainImage.classList.remove('imgContact');
+                }
+            }
         }
-    }
-    else if (window.pageYOffset >= 1700) {
-        ligne02.style.opacity = 0.5;
-        ligne03.style.opacity = 1;
-        if (window.matchMedia("(min-width: 430px)").matches) {
-            mainImage.style.backgroundImage = "url(/img/hogwarts_letters.jpeg)";
-            mainText.style.opacity = 0;
-        }
-    }
+    });
 });
+
+aboutElement.forEach((el) => observerImg.observe(el));
+skillElement.forEach((el) => observerImg.observe(el));
+pensineElement.forEach((el) => observerImg.observe(el));
+blurEleement.forEach((el) => observerImg.observe(el));
+formElement.forEach((el) => observerImg.observe(el));
+
 /* SIDE NAV BAR END */
