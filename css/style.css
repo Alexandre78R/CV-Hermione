@@ -430,6 +430,10 @@ main {
     gap: 9rem 7rem;
 }
 
+.grid::-webkit-scrollbar   {
+    display: none;
+}
+
 .grid p {
     font-family: var(--text-font);
     font-size: 28px;
