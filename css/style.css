@@ -415,7 +415,7 @@ main {
     margin-top: 10rem;
 }
 
-.hidden-left {
+/* .hidden-left {
     opacity: 0;
     transform: translateX(-200px);
     transition: all 2.4s;
@@ -445,10 +445,48 @@ main {
     animation-iteration-count: 1;
     animation-direction: normal;
     animation-fill-mode: both;
+} */
+
+.animation-left {
+    animation-name: anim-left;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in;
+    animation-delay: 0.1s;
+    animation-direction: normal;
+    animation-fill-mode: both;
+}
+
+.animation-right {
+    animation-name: anim-right;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in;
+    animation-delay: 0.1s;
+    animation-direction: normal;
+    animation-fill-mode: both;
+}
+
+@keyframes anim-left {
+    from {
+        transform: translateX(-250px);
+    }
+
+    to {
+        transform: translate(0);
+    }
+}
+
+@keyframes anim-right {
+    from {
+        transform: translateX(250px);
+    }
+
+    to {
+        transform: translate(0);
+    }
 }
 
 .grid {
-    overflow-x: hidden;
+    overflow: hidden;
     width: 100%;
     display: grid;
     justify-content: space-evenly;
@@ -458,10 +496,6 @@ main {
     grid-template-columns: repeat(2, 16rem);
     grid-template-rows: repeat(3, 2.5rem);
     gap: 9rem 7rem;
-}
-
-.grid::-webkit-scrollbar   {
-    display: none;
 }
 
 .grid p {

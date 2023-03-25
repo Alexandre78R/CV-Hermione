@@ -211,7 +211,7 @@ hiddenElementsRight.forEach((el) => observer.observe(el));
 
 /* SIDE NAV BAR START */
 const pensineElement = document.querySelectorAll('.pensine');
-const hedwigeElement = document.querySelectorAll('.hedwige');
+const buttomFromElement = document.querySelectorAll('.button');
 const aboutElement = document.querySelectorAll('.about_me');
 const blurEleement = document.querySelectorAll('.blur');
 const skillElement = document.querySelectorAll('.skills');
@@ -279,7 +279,7 @@ const observerImg = new IntersectionObserver((entries) => {
                         ligne03.style.opacity = 0.5;
                     }
                 }
-            } else if (entry.target.className === "hedwige") {
+            } else if (entry.target.className === "button") {
 
                 if (entry.isIntersecting) {
                     ligne01.style.opacity = 0.5;
@@ -303,6 +303,6 @@ aboutElement.forEach((el) => observerImg.observe(el));
 skillElement.forEach((el) => observerImg.observe(el));
 pensineElement.forEach((el) => observerImg.observe(el));
 blurEleement.forEach((el) => observerImg.observe(el));
-hedwigeElement.forEach((el) => observerImg.observe(el));
+buttomFromElement.forEach((el) => observerImg.observe(el));
 
 /* SIDE NAV BAR END */
