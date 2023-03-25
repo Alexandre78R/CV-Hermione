@@ -178,6 +178,10 @@ close.addEventListener('click', function () {
 const hiddenElementsLeft = document.querySelectorAll('.hidden-left');
 const hiddenElementsRight = document.querySelectorAll('.hidden-right');
 
+const ligne01 = document.getElementById("ligne1");
+const ligne02 = document.getElementById("ligne2");
+const ligne03 = document.getElementById("ligne3");
+
 // Pensine Text Animation
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -203,10 +207,6 @@ hiddenElementsLeft.forEach((el) => observer.observe(el));
 hiddenElementsRight.forEach((el) => observer.observe(el));
 
 /* SIDE NAV BAR START */
-
-const ligne01 = document.getElementById("ligne1");
-const ligne02 = document.getElementById("ligne2");
-const ligne03 = document.getElementById("ligne3");
 
 window.addEventListener("scroll", event => {
     let { pageYOffset } = window;

@@ -391,6 +391,18 @@ main {
     transition: all 2.4s;
 }
 
+.pensine::-webkit-scrollbar {
+    display: none;
+}
+
+.hidden-left::-webkit-scrollbar  {
+    display: none;
+}
+
+.hidden-right::-webkit-scrollbar  {
+    display: none;
+}
+
 .hidden-right {
     opacity: 0;
     transform: translateX(200px);
