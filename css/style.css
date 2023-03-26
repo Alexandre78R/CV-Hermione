@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     border: 0;
+    cursor: default;
 }
 
 :root {
@@ -85,10 +86,39 @@ nav {
     height: 100%;
     background-color: #fff;
     background-image: url("/img/Hermione.jpg");
+    opacity: 1;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     transition-duration: 0.7s;
+}
+
+.imgHermione {
+    background-image: url("/img/Hermione.jpg");
+}
+
+.imgHermioneHouse {
+    background-image: url("/img/hermione_house.jpeg");
+}
+
+.imgOtterPatronus {
+    background-image: url("/img/otter_patronus.jpeg");
+}
+
+.imgMagicWand {
+    background-image : url("/img/magic_wand.jpeg");
+}
+
+.imgCat {
+    background-image : url("/img/hermione_cat.jpeg");
+}
+
+.imgPensine {
+    background-image: url("/img/pensieve_dekstop.jpg");
+}
+
+.imgContact {
+    background-image: url("/img/hogwarts_letters.jpeg");
 }
 
 .portrait h1 {
@@ -385,22 +415,10 @@ main {
     margin-top: 10rem;
 }
 
-.hidden-left {
+/* .hidden-left {
     opacity: 0;
     transform: translateX(-200px);
     transition: all 2.4s;
-}
-
-.pensine::-webkit-scrollbar {
-    display: none;
-}
-
-.hidden-left::-webkit-scrollbar  {
-    display: none;
-}
-
-.hidden-right::-webkit-scrollbar  {
-    display: none;
 }
 
 .hidden-right {
@@ -427,10 +445,48 @@ main {
     animation-iteration-count: 1;
     animation-direction: normal;
     animation-fill-mode: both;
+} */
+
+.animation-left {
+    animation-name: anim-left;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in;
+    animation-delay: 0.1s;
+    animation-direction: normal;
+    animation-fill-mode: both;
+}
+
+.animation-right {
+    animation-name: anim-right;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in;
+    animation-delay: 0.1s;
+    animation-direction: normal;
+    animation-fill-mode: both;
+}
+
+@keyframes anim-left {
+    from {
+        transform: translateX(-250px);
+    }
+
+    to {
+        transform: translate(0);
+    }
+}
+
+@keyframes anim-right {
+    from {
+        transform: translateX(250px);
+    }
+
+    to {
+        transform: translate(0);
+    }
 }
 
 .grid {
-    overflow-x: hidden;
+    overflow: hidden;
     width: 100%;
     display: grid;
     justify-content: space-evenly;
