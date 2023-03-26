@@ -125,7 +125,6 @@ menuHamburger.addEventListener("click", () => {
 });
 
 // Fermer le menu burger lors du click sur un titres
-
 const navUl = document.getElementById("navTitle");
 const navNone = document.querySelector(".nav_links");
 
@@ -138,8 +137,6 @@ navUl.addEventListener("click", () => {
 });
 
 // MENU BURGER END
-
-
 const button = document.querySelector('.button');
 const popUp = document.querySelector('.bubble');
 const close = document.querySelector('.close');
@@ -211,7 +208,8 @@ hiddenElementsRight.forEach((el) => observer.observe(el));
 
 /* SIDE NAV BAR START */
 const pensineElement = document.querySelectorAll('.pensine');
-const formElement = document.querySelectorAll('.form');
+const labelTextmessageFromElement = document.querySelectorAll('#message');
+const hedwigeFromElement = document.querySelectorAll('.hedwige');
 const aboutElement = document.querySelectorAll('.about_me');
 const blurEleement = document.querySelectorAll('.blur');
 const skillElement = document.querySelectorAll('.skills');
@@ -279,20 +277,38 @@ const observerImg = new IntersectionObserver((entries) => {
                         ligne03.style.opacity = 0.5;
                     }
                 }
-            } else if (entry.target.className === "form") {
-
-                if (entry.isIntersecting) {
-                    ligne01.style.opacity = 0.5;
-                    ligne02.style.opacity = 0.5;
-                    ligne03.style.opacity = 1;
-                    mainText.style.opacity = 0;
-                    mainImage.classList.add('imgContact');
-                } else {
-                    ligne01.style.opacity = 0.5;
-                    ligne02.style.opacity = 1;
-                    ligne03.style.opacity = 0.5;
-                    mainText.style.opacity = 0;
-                    mainImage.classList.remove('imgContact');
+            }
+            if (window.matchMedia("(max-height: 1250px)").matches) {
+                if (entry.target.id === "message") {
+                    if (entry.isIntersecting) {
+                        ligne01.style.opacity = 0.5;
+                        ligne02.style.opacity = 0.5;
+                        ligne03.style.opacity = 1;
+                        mainText.style.opacity = 0;
+                        mainImage.classList.add('imgContact');
+                    } else {
+                        ligne01.style.opacity = 0.5;
+                        ligne02.style.opacity = 1;
+                        ligne03.style.opacity = 0.5;
+                        mainText.style.opacity = 0;
+                        mainImage.classList.remove('imgContact');
+                    }
+                }
+            } else {
+                if (entry.target.className === "hedwige") {
+                    if (entry.isIntersecting) {
+                        ligne01.style.opacity = 0.5;
+                        ligne02.style.opacity = 0.5;
+                        ligne03.style.opacity = 1;
+                        mainText.style.opacity = 0;
+                        mainImage.classList.add('imgContact');
+                    } else {
+                        ligne01.style.opacity = 0.5;
+                        ligne02.style.opacity = 1;
+                        ligne03.style.opacity = 0.5;
+                        mainText.style.opacity = 0;
+                        mainImage.classList.remove('imgContact');
+                    }
                 }
             }
         }
@@ -303,6 +319,6 @@ aboutElement.forEach((el) => observerImg.observe(el));
 skillElement.forEach((el) => observerImg.observe(el));
 pensineElement.forEach((el) => observerImg.observe(el));
 blurEleement.forEach((el) => observerImg.observe(el));
-formElement.forEach((el) => observerImg.observe(el));
-
+labelTextmessageFromElement.forEach((el) => observerImg.observe(el));
+hedwigeFromElement.forEach((el) => observerImg.observe(el));
 /* SIDE NAV BAR END */
