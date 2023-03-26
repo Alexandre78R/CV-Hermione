@@ -125,7 +125,6 @@ menuHamburger.addEventListener("click", () => {
 });
 
 // Fermer le menu burger lors du click sur un titres
-
 const navUl = document.getElementById("navTitle");
 const navNone = document.querySelector(".nav_links");
 
@@ -138,8 +137,6 @@ navUl.addEventListener("click", () => {
 });
 
 // MENU BURGER END
-
-
 const button = document.querySelector('.button');
 const popUp = document.querySelector('.bubble');
 const close = document.querySelector('.close');
