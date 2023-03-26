@@ -127,7 +127,7 @@ nav img {
 .portrait {
   width: 100%;
   height: 105vh;
-  background-image: url("/img/Hermione.jpg");
+  background-image: url("../img/Hermione.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -435,7 +435,7 @@ nav img {
 .pensine {
   width: 100%;
   height: 42rem;
-  background-image: url("/img/pensine.jpg");
+  background-image: url("../img/pensine.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -517,7 +517,7 @@ nav img {
 }
 
 .contact .directional-arrows {
-  background-image: url(/img/doubles-fleches.png);
+  background-image: url(../img/doubles-fleches.png);
   background-repeat: no-repeat;
   background-size: cover;
   width: 1.5rem;
