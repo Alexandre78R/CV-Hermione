@@ -51,7 +51,8 @@ body::-webkit-scrollbar {
 }
 
 .image_scroll img:hover {
-    transform: scale(1.05);
+    cursor: pointer;
+    transform: scale(1.1);
     transition: all 0.3s ease;
 }
 
@@ -522,6 +523,7 @@ main {
 
 .contact form input,
 textarea {
+    transition-duration: 0.5s;
     display: flex;
     width: 23rem;
     border: 2px solid rgba(233, 233, 233, 0.7);
@@ -574,6 +576,7 @@ textarea {
 }
 
 .contact .button:hover {
+    transition-duration: 0.2s;
     background-color: var(--font-color01);
     color: var(--font-color02);
     border: 2px solid var(--font-color02);
