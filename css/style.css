@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   border: 0;
+  cursor: default;
 }
 
 :root {
@@ -52,6 +53,7 @@ body::-webkit-scrollbar {
 .image_scroll img:hover {
   transform: scale(1.05);
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .ligne_scroll {
@@ -85,10 +87,39 @@ nav {
   height: 100%;
   background-color: #fff;
   background-image: url("/img/Hermione.jpg");
+  opacity: 1;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   transition-duration: 0.7s;
+}
+
+.imgHermione {
+  background-image: url("/img/Hermione.jpg");
+}
+
+.imgHermioneHouse {
+  background-image: url("/img/hermione_house.jpeg");
+}
+
+.imgOtterPatronus {
+  background-image: url("/img/otter_patronus.jpeg");
+}
+
+.imgMagicWand {
+  background-image: url("/img/magic_wand.jpeg");
+}
+
+.imgCat {
+  background-image: url("/img/hermione_cat.jpeg");
+}
+
+.imgPensine {
+  background-image: url("/img/pensieve_dekstop.jpg");
+}
+
+.imgContact {
+  background-image: url("/img/hogwarts_letters.jpeg");
 }
 
 .portrait h1 {
@@ -374,7 +405,7 @@ main {
   margin-top: 10rem;
 }
 
-.hidden-left {
+HEAD .hidden-left {
   opacity: 0;
   transform: translateX(-200px);
   transition: all 2.4s;
@@ -386,16 +417,6 @@ main {
   transition: all 2.4s;
 }
 
-.animation-left {
-  opacity: 1;
-  transform: translateX(0);
-  animation-timing-function: ease-in;
-  animation-delay: 0.1s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: both;
-}
-
 .animation-right {
   opacity: 1;
   transform: translateX(0);
@@ -405,8 +426,46 @@ main {
   animation-direction: normal;
   animation-fill-mode: both;
 }
+.animation-left {
+  animation-name: anim-left;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in;
+  animation-delay: 0.1s;
+  animation-direction: normal;
+  animation-fill-mode: both;
+}
+
+.animation-right {
+  animation-name: anim-right;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in;
+  animation-delay: 0.1s;
+  animation-direction: normal;
+  animation-fill-mode: both;
+}
+
+@keyframes anim-left {
+  from {
+    transform: translateX(-250px);
+  }
+
+  to {
+    transform: translate(0);
+  }
+}
+
+@keyframes anim-right {
+  from {
+    transform: translateX(250px);
+  }
+
+  to {
+    transform: translate(0);
+  }
+}
 
 .grid {
+  overflow: hidden;
   width: 100%;
   display: grid;
   justify-content: space-evenly;
@@ -416,6 +475,10 @@ main {
   grid-template-columns: repeat(2, 16rem);
   grid-template-rows: repeat(3, 2.5rem);
   gap: 9rem 7rem;
+}
+
+.grid::-webkit-scrollbar {
+  display: none;
 }
 
 .grid p {
@@ -602,4 +665,8 @@ textarea {
   padding: 2rem;
   text-align: center;
   margin-top: 4rem;
+}
+
+.up {
+  display: none;
 }

@@ -118,7 +118,6 @@ nav img {
 }
 
 .portrait_text {
-
   transition: all 0.5s ease;
 }
 
@@ -293,8 +292,6 @@ nav img {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
-
 }
 
 .point_about_me {
@@ -320,8 +317,6 @@ nav img {
   justify-content: center;
 }
 
-
-
 .arrow_carousel:hover {
   cursor: pointer;
   transform: scale(1.2);
@@ -335,11 +330,9 @@ nav img {
   transform: scale(1);
 }
 
-
 #L {
   height: 0;
   width: 0;
-
 
   transition: all 0.3s ease;
 
@@ -347,7 +340,6 @@ nav img {
   border-bottom: solid transparent 0.45rem;
   border-right: solid var(--font-color01) 0.7rem;
 }
-
 
 #R {
   height: 0;
@@ -365,7 +357,6 @@ nav img {
 .vertical-line {
   position: absolute;
   height: 59.5rem;
-  opacity: 0.9;
   border-left: 0.2rem solid rgb(0, 0, 0);
   left: 50%;
   margin-left: -2px;
@@ -441,38 +432,6 @@ nav img {
   background-position: center;
 }
 
-.hidden-left {
-  opacity: 0;
-  transform: translateX(-100px);
-  transition: all 2.4s;
-}
-
-.hidden-right {
-  opacity: 0;
-  transform: translateX(100px);
-  transition: all 2.4s;
-}
-
-.animation-left {
-  opacity: 1;
-  transform: translateX(0);
-  animation-timing-function: ease-in;
-  animation-delay: 0.1s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: both;
-}
-
-.animation-right {
-  opacity: 1;
-  transform: translateX(0);
-  animation-timing-function: ease-in;
-  animation-delay: 0.1s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: both;
-}
-
 .grid {
   width: 100%;
   display: grid;
@@ -514,7 +473,6 @@ nav img {
   letter-spacing: 0.1em;
 }
 
-
 /*BLUR*/
 .index3 {
   z-index: 3;
@@ -537,9 +495,7 @@ nav img {
   z-index: 0;
   width: 100%;
   height: 55rem;
-  background: linear-gradient(180deg,
-      #2b2f53 6.15%,
-      rgba(165, 164, 181, 0.5) 179%);
+  background: linear-gradient(180deg, #2b2f53 6.15%, rgba(165, 164, 181, 0.5) 179%);
 }
 
 /*ARROWS*/
@@ -600,7 +556,6 @@ textarea:focus {
   margin: 0.3rem 0 0.5rem 0;
 }
 
-
 .contact form textarea {
   margin: 0.3rem 0 0.5rem 0;
   border-radius: 0.5rem;
@@ -617,7 +572,6 @@ textarea:focus {
   margin: 0.3rem 0 1.25rem 0;
 }
 
-
 #error-message-firstname,
 #error-message-email,
 #error-message-text {
@@ -628,7 +582,6 @@ textarea:focus {
   opacity: 0;
 }
 
-
 .contact .button {
   width: 4.5rem;
   height: 1.8rem;
@@ -638,8 +591,6 @@ textarea:focus {
   margin-bottom: 1rem;
   margin-top: 0.5rem;
 }
-
-
 
 /* BUBBLE */
 .contact .bubble {
@@ -674,6 +625,25 @@ textarea:focus {
   border-right: 1rem solid transparent;
 }
 
+/*GO UP*/
+
+.up {
+  z-index: 3;
+  bottom: 1%;
+  right: 6%;
+  position: absolute;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: #dfdfdf;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+.up img {
+  margin: 0.45rem 0 0 0.5rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  transform: rotate(180deg);
+}
 /* HEDWIDGE */
 .contact .hedwige {
   display: flex;
@@ -699,7 +669,6 @@ textarea:focus {
 }
 
 /* FOOTER */
-
 
 .footer {
   position: absolute;

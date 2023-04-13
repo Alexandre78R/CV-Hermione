@@ -47,8 +47,9 @@ document.body.onload = function () {
 
         if (position == 0) {
             if (window.matchMedia("(min-width: 430px)").matches) {
-                mainImage.style.backgroundImage = "url(/img/Hermione.jpg)";
-                mainText.style.opacity = 0.8;
+                mainImage.classList.remove('imgHermioneHouse');
+                mainImage.classList.add('imgHermione');
+                mainText.style.opacity = 1;
             }
             arrowL.classList.add("disabled");
             point1.classList.add("point_current");
@@ -60,7 +61,9 @@ document.body.onload = function () {
         if (position == -1) {
             point2.classList.add("point_current");
             if (window.matchMedia("(min-width: 430px)").matches) {
-                mainImage.style.backgroundImage = "url(/img/hermione_house.jpeg)";
+                mainImage.classList.remove('imgHermione');
+                mainImage.classList.remove('imgMagicWand');
+                mainImage.classList.add('imgHermioneHouse');
                 mainText.style.opacity = 0;
             }
         }
@@ -69,7 +72,9 @@ document.body.onload = function () {
         if (position == -2) {
             point3.classList.add("point_current");
             if (window.matchMedia("(min-width: 430px)").matches) {
-                mainImage.style.backgroundImage = "url(/img/magic_wand.jpeg)";
+                mainImage.classList.remove('imgHermioneHouse');
+                mainImage.classList.remove('imgOtterPatronus');
+                mainImage.classList.add('imgMagicWand');
                 mainText.style.opacity = 0;
             }
         }
@@ -78,7 +83,9 @@ document.body.onload = function () {
         if (position == -3) {
             point4.classList.add("point_current");
             if (window.matchMedia("(min-width: 430px)").matches) {
-                mainImage.style.backgroundImage = "url(/img/otter_patronus.jpeg)";
+                mainImage.classList.remove('imgMagicWand');
+                mainImage.classList.remove('imgCat');
+                mainImage.classList.add('imgOtterPatronus');
                 mainText.style.opacity = 0;
             }
         }
@@ -87,7 +94,8 @@ document.body.onload = function () {
         if (position == -4) {
             point5.classList.add("point_current");
             if (window.matchMedia("(min-width: 430px)").matches) {
-                mainImage.style.backgroundImage = "url(/img/hermione_cat.jpeg)";
+                mainImage.classList.remove('imgOtterPatronus');
+                mainImage.classList.add('imgCat');
                 mainText.style.opacity = 0;
             }
         }
@@ -117,7 +125,6 @@ menuHamburger.addEventListener("click", () => {
 });
 
 // Fermer le menu burger lors du click sur un titres
-
 const navUl = document.getElementById("navTitle");
 const navNone = document.querySelector(".nav_links");
 
@@ -130,8 +137,6 @@ navUl.addEventListener("click", () => {
 });
 
 // MENU BURGER END
-
-
 const button = document.querySelector('.button');
 const popUp = document.querySelector('.bubble');
 const close = document.querySelector('.close');
@@ -174,72 +179,146 @@ close.addEventListener('click', function () {
     popUp.style.opacity = '0';
 })
 
+const hiddenElementsLeft = document.querySelectorAll('.hidden-left');
+const hiddenElementsRight = document.querySelectorAll('.hidden-right');
 
 // Pensine Text Animation
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-        if (entry.target.className === "hidden-left" || entry.target.className === "hidden-left animation-left") {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animation-left');
-            } else {
-                entry.target.classList.remove('animation-left');
-            }
-        } else if (entry.target.className === "hidden-right" || entry.target.className === "hidden-right animation-right") {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animation-right');
-            } else {
-                entry.target.classList.remove('animation-right');
+        if (window.matchMedia("(min-width: 430px)").matches) {
+            if (entry.target.className === "hidden-left" || entry.target.className === "hidden-left animation-left") {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animation-left');
+                } else {
+                    entry.target.classList.remove('animation-left');
+                }
+            } else if (entry.target.className === "hidden-right" || entry.target.className === "hidden-right animation-right") {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animation-right');
+                } else {
+                    entry.target.classList.remove('animation-right');
+                }
             }
         }
     });
 });
 
-const hiddenElementsLeft = document.querySelectorAll('.hidden-left');
 hiddenElementsLeft.forEach((el) => observer.observe(el));
-
-const hiddenElementsRight = document.querySelectorAll('.hidden-right');
 hiddenElementsRight.forEach((el) => observer.observe(el));
 
 /* SIDE NAV BAR START */
+const pensineElement = document.querySelectorAll('.pensine');
+const labelTextmessageFromElement = document.querySelectorAll('#message');
+const hedwigeFromElement = document.querySelectorAll('.hedwige');
+const aboutElement = document.querySelectorAll('.about_me');
+const blurEleement = document.querySelectorAll('.blur');
+const skillElement = document.querySelectorAll('.skills');
 
 const ligne01 = document.getElementById("ligne1");
 const ligne02 = document.getElementById("ligne2");
 const ligne03 = document.getElementById("ligne3");
 
-window.addEventListener("scroll", event => {
-    let { pageYOffset } = window;
-    let scroll = this.scrollY;
-
-    if (pageYOffset <= 1000) {
-        ligne01.style.opacity = 1;
-        ligne02.style.opacity = 0.5;
-        ligne03.style.opacity = 0.5;
-    }
-
-    if (pageYOffset <= 700 && pageYOffset >= 200) {
+const observerImg = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
         if (window.matchMedia("(min-width: 430px)").matches) {
-            mainImage.style.backgroundImage = "url(/img/Hermione.jpg)";
-            mainText.style.opacity = 0.8;
+            if (entry.target.className === "about_me") {
+                if (entry.isIntersecting) {
+                    ligne01.style.opacity = 1;
+                    ligne02.style.opacity = 0.5;
+                    ligne03.style.opacity = 0.5;
+                    if (position !== 0) {
+                        mainText.style.opacity = 0;
+                    } else {
+                        mainText.style.opacity = 1;
+                    }
+                    if (mainImage.className === 'portrait imgPensine imgHermione') {
+                        mainImage.classList.remove('imgPensine');
+                        ligne01.style.opacity = 1;
+                        ligne02.style.opacity = 0.5;
+                        ligne03.style.opacity = 0.5;
+                        mainText.style.opacity = 1;
+                    }
+                    mainImage.classList.add('imgHermione');
+                    if (mainImage.className === "portrait imgPensine imgHermione"){
+                        mainImage.classList.remove('imgPensine');
+                    } 
+                } else {
+                    mainImage.classList.remove('imgHermione');
+                }
+            } else if (entry.target.className === "pensine") {
+                if (entry.isIntersecting) {
+                    ligne01.style.opacity = 0.5;
+                    ligne02.style.opacity = 1;
+                    ligne03.style.opacity = 0.5;
+                    mainText.style.opacity = 0;
+                    mainImage.classList.add('imgPensine');
+                } else { 
+                    mainImage.classList.remove('imgPensine');
+                    if (mainImage.className === 'portrait') {
+                        mainText.style.opacity = 1;
+                    }
+                }
+            } else if (entry.target.className === "blur") {
+                if (entry.isIntersecting) {
+                    ligne01.style.opacity = 0.5;
+                    ligne02.style.opacity = 1;
+                    ligne03.style.opacity = 0.5;
+                    mainText.style.opacity = 0;
+                    if (mainImage.className === 'portrait imgContact imgPensine') {
+                        mainImage.classList.remove('imgContact');
+                    }
+                    mainImage.classList.add('imgPensine');
+                } else {
+                    mainImage.classList.remove('imgPensine');
+                    if (mainImage.className === 'portrait') {
+                        mainText.style.opacity = 1;
+                        ligne01.style.opacity = 1;
+                        ligne02.style.opacity = 0.5;
+                        ligne03.style.opacity = 0.5;
+                    }
+                }
+            }
+            if (window.matchMedia("(max-height: 1250px)").matches) {
+                if (entry.target.id === "message") {
+                    if (entry.isIntersecting) {
+                        ligne01.style.opacity = 0.5;
+                        ligne02.style.opacity = 0.5;
+                        ligne03.style.opacity = 1;
+                        mainText.style.opacity = 0;
+                        mainImage.classList.add('imgContact');
+                    } else {
+                        ligne01.style.opacity = 0.5;
+                        ligne02.style.opacity = 1;
+                        ligne03.style.opacity = 0.5;
+                        mainText.style.opacity = 0;
+                        mainImage.classList.remove('imgContact');
+                    }
+                }
+            } else {
+                if (entry.target.className === "hedwige") {
+                    if (entry.isIntersecting) {
+                        ligne01.style.opacity = 0.5;
+                        ligne02.style.opacity = 0.5;
+                        ligne03.style.opacity = 1;
+                        mainText.style.opacity = 0;
+                        mainImage.classList.add('imgContact');
+                    } else {
+                        ligne01.style.opacity = 0.5;
+                        ligne02.style.opacity = 1;
+                        ligne03.style.opacity = 0.5;
+                        mainText.style.opacity = 0;
+                        mainImage.classList.remove('imgContact');
+                    }
+                }
+            }
         }
-    }
-
-
-    else if (pageYOffset >= 1000 && pageYOffset <= 1700) {
-        ligne01.style.opacity = 0.5;
-        ligne02.style.opacity = 1;
-        ligne03.style.opacity = 0.5;
-        if (window.matchMedia("(min-width: 430px)").matches) {
-            mainImage.style.backgroundImage = "url(/img/pensieve_dekstop.jpg)";
-            mainText.style.opacity = 0;
-        }
-    }
-    else if (window.pageYOffset >= 1700) {
-        ligne02.style.opacity = 0.5;
-        ligne03.style.opacity = 1;
-        if (window.matchMedia("(min-width: 430px)").matches) {
-            mainImage.style.backgroundImage = "url(/img/hogwarts_letters.jpeg)";
-            mainText.style.opacity = 0;
-        }
-    }
+    });
 });
+
+aboutElement.forEach((el) => observerImg.observe(el));
+skillElement.forEach((el) => observerImg.observe(el));
+pensineElement.forEach((el) => observerImg.observe(el));
+blurEleement.forEach((el) => observerImg.observe(el));
+labelTextmessageFromElement.forEach((el) => observerImg.observe(el));
+hedwigeFromElement.forEach((el) => observerImg.observe(el));
 /* SIDE NAV BAR END */
