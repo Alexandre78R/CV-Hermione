@@ -625,25 +625,6 @@ textarea:focus {
   border-right: 1rem solid transparent;
 }
 
-/*GO UP*/
-
-.up {
-  z-index: 3;
-  bottom: 1%;
-  right: 6%;
-  position: absolute;
-  height: 2.5rem;
-  width: 2.5rem;
-  background-color: #dfdfdf;
-  border-radius: 50%;
-  opacity: 0.8;
-}
-.up img {
-  margin: 0.45rem 0 0 0.5rem;
-  height: 1.5rem;
-  width: 1.5rem;
-  transform: rotate(180deg);
-}
 /* HEDWIDGE */
 .contact .hedwige {
   display: flex;
@@ -677,4 +658,24 @@ textarea:focus {
   color: var(--font-color01);
   text-align: center;
   z-index: 1;
+}
+
+/*GO UP*/
+
+.up {
+  z-index: 3;
+  bottom: 1%;
+  right: 6%;
+  position: absolute;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: #dfdfdf;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+.up img {
+  margin: 0.45rem 0 0 0.5rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  transform: rotate(180deg);
 }
